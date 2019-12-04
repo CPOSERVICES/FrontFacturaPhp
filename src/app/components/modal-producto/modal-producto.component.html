@@ -1,0 +1,172 @@
+<div class="col-md-4" [ngClass]="_modalProducto.oculto">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title"><small>Click on image</small></h4>
+      <!-- sample modal content -->
+      <div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: block;" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myLargeModalLabel">Productos y Servicios</h4>
+              <button (click)="_modalProducto.ocultarModal()" type="button" class="close" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+
+              <div class="col col-md-12">
+                <div class="row efectobus">
+
+                  <div class="col col-md-3">
+                    <label>Productos</label>
+                    <div class="input-group">
+                      <input id="criterioproducto" class="form-control" type="text" value=""
+                        placeholder="Ingrese su Busqueda">
+                      <span class="input-group-btn">
+                        <button id="botonbuscarextrabotonproducto" type="button" class="btn btn-primary btn-flat">
+                          <i class="fa  fa-search"></i>
+                        </button>
+                      </span>
+                    </div>
+
+
+                  </div>
+                  <div class="col col-md-3">
+                    <label>Seleccione un Resultado</label>
+                    <select class="form-control" id="productos">
+                    </select>
+                  </div>
+
+                  <div class="col col-md-3">
+                    <label>Bodega </label>
+                    <select class="form-control" name="bodegas" id="bodegas">
+                      <option value="1">Principal</option>
+                      <option value="7">Bodega1</option>
+                    </select>
+                  </div>
+                  <div class="col col-md-3">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-success" onclick="" id="botonnuevoproducto">Nuevo
+                        Producto/Servicio
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="col-md-12  ">
+                <div class="form-group row">
+
+                  <div class="col col-md-2">
+                    <label>Codigo</label>
+                    <div class="input-group">
+                      <input id="" name="" class="form-control" type="text" value="" placeholder="Codigo">
+                    </div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <label>Precio </label>
+                    <select class="form-control" name="bodegas" id="bodegas">
+                      <option value="1">precio 1</option>
+                      <option value="7">precio 2</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <label>Tipo </label>
+                    <select class="form-control" name="bodegas" id="bodegas">
+                      <option value="1">producto</option>
+                      <option value="7">precio 2</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label>IVA </label>
+                    <select class="form-control" name="bodegas" id="bodegas">
+                      <option value="1">iva</option>
+                      <option value="7">precio 2</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label>Ice </label>
+                    <select class="form-control" name="bodegas" id="bodegas">
+                      <option value="1">ice</option>
+                      <option value="7">precio 2</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label>irbpnr </label>
+                    <select class="form-control" name="bodegas" id="bodegas">
+                      <option value="1">irbpnr</option>
+                      <option value="7">precio 2</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <div class="col col-md-6">
+                    <label>Nombre</label>
+                    <div class="input-group">
+                      <input id="" name="" class="form-control" type="text" value="" placeholder="Nombre">
+                    </div>
+                  </div>
+                  <div class="col col-md-6">
+                    <label>Descripcion</label>
+                    <div class="input-group">
+                      <textarea id="" rows="4" name="" class="form-control" type="text" value=""
+                        placeholder="Descripción"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <div class="col col-md-4">
+                    <label>Costo</label>
+                    <div class="input-group">
+                      <input id="" name="" class="form-control" type="text" value="" placeholder="Nombre">
+                    </div>
+                  </div>
+                  <div class="col col-md-4">
+                    <label>Cantidad</label>
+                    <div class="input-group">
+                      <input id="" name="" class="form-control" type="text" value="" placeholder="Nombre">
+                    </div>
+                  </div>
+                  <div class="col col-md-4">
+                    <label>Stock Mínimo</label>
+                    <div class="input-group">
+                      <input id="" name="" class="form-control" type="text" value="" placeholder="Nombre">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button (click)="_modalProducto.ocultarModal()" type="button"
+                class="btn btn-danger waves-effect text-left">Cerrar</button>
+              <button type="button" id="botonguardarproductoyanadirarticulo" class="btn btn-primary"
+                disabled="disabled">
+                Guardar Producto y Añadir al Carro
+              </button>
+              <button type="button" id="botonanadiralcarrito" class="btn btn-primary"> Añadir
+                y
+                Continuar
+              </button>
+              <button type="button" id="botonanadiralcarritoycerrar" class="btn btn-success">
+                Añadir y
+                Cerrar
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      <!-- <img src="assets/images/alert/model2.png" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg"
+        class="model_img img-responsive"> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside class="left-sidebar">
+  <!-- Sidebar scroll-->
+  <div class="scroll-sidebar">
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav">
+        <li class="user-pro"> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
+            aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user-img" class="img-circle"><span
+              class="hide-menu">Mark Jeckson</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a routeLink="/perfil" routerLinkActive="active"><i class="ti-user"></i> Mi Perfil</a></li>
+            <li><a ><i class="ti-settings"></i> Configurar Cuenta</a></li>
+            <li><a routerLink="/login" routerLinkActive="active"><i class="fa fa-power-off"></i> Cerrar Sésion</a></li>
+          </ul>
+        </li>
+        <li>
+                <a routerLink="/dashboard" class="waves-effect waves-dark" aria-expanded="false">
+                  <i class="icon-speedometer"></i>
+                  <span class="hide-menu">Mi Oificina</span>
+                </a>
+              </li>
+              <li *ngFor="let menu of _sidebar.menu">
+                <a class=" has-arrow waves-effect waves-dark" aria-expanded="false">
+                  <i [class]="menu.icono"></i>
+                  <span class="hide-menu">{{menu.titulo}} </span>
+                  
+                </a>
+                <ul aria-expanded="false" class="collapse">
+                  <li *ngFor="let submenu of menu.submenu">
+                    <a [routerLink]="[submenu.url]" routerLinkActive="router-link-active">{{submenu.titulo}}</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a routerLink="/agenda" class="waves-effect waves-dark" aria-expanded="false">
+                  <i class="ti-calendar"></i>
+                  <span class="hide-menu">Mi Agenda</span>
+                </a>
+              </li>
+        
+      </ul>
+    </nav>
+    <!-- End Sidebar navigation -->
+  </div>
+  <!-- End Sidebar scroll-->
+</aside>
+<!-- ============================================================== -->
+<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
