@@ -1,0 +1,78 @@
+<div class="col-md-4" [ngClass]="_modalControl.oculto">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title"><small>Click on image</small></h4>
+            <!-- sample modal content -->
+            <div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: block;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Nuevo Pago</h4>
+                    <button (click)="_modalControl.ocultarModal()" type="button" class="close" aria-hidden="true">×</button>
+                  </div>
+                  <div class="modal-body">
+                        <form>
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <label>Concepto</label>
+                              </div>
+                              <div class="col-md-8">
+                                <input type="text" class="form-control" id="pago_fecha" value="2019-12-04">
+                              </div>
+                            </div>
+                          </div>
+          
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <label for="message-text" class="control-label">Imagen(Opcional)</label>
+                              </div>
+                              <div class="col-md-8">
+                                <img src="" alt="">
+                                <input type="file" class="form-control">
+                              </div>
+                            </div>
+          
+                          </div>
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <label for="recipient-name" class="control-label">Forma de Pago</label>
+                              </div>
+                              <div class="col-md-8">
+                                <select name="" id="" class="form-control">
+                                  <option value="">efectivo</option>
+                                  <option value="">tarjeta</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="row">
+                                  <div class="col-md-4">
+                                          <label for="recipient-name" class="control-label">Valor</label>
+                                  </div>
+                                  <div class="col-md-8">
+                                          <input type="text" class="form-control" id="pago_fecha" value="2019.26">
+                                  </div>
+                              </div>
+                          </div>
+                        </form>
+                      </div>
+                  <div class="modal-footer">
+                    <button (click)="_modalControl.ocultarModal()" type="button" class="btn btn-danger waves-effect text-left">Cerrar</button>
+                    <button type="button" id="botonanadiralcarritoycerrar" class="btn btn-success"> Guardar</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+            <!-- <img src="assets/images/alert/model2.png" alt="default" data-toggle="modal" data-target=".bs-example-modal-lg"
+              class="model_img img-responsive"> -->
+          </div>
+        </div>
+      </div>
+      

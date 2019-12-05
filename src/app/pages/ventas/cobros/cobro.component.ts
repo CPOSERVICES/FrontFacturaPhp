@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalControlService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-cobro',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CobroComponent implements OnInit {
 
-  constructor() { }
+  constructor(  public _modalControl: ModalControlService
+    ) { }
 
   ngOnInit() {
   }

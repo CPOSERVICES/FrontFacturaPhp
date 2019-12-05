@@ -13,7 +13,7 @@ export class SidebarService {
       titulo: 'Documentos Eléctronicos',
       icono: 'ti-files',
       submenu: [
-        { titulo: 'Facturas', url: '/facturas' },
+        { titulo: 'Facturas', url: '/factura/nueva' },
         { titulo: 'Notas de Débito', url: '/notasDebito' },
         { titulo: 'Notas de Crédito', url: '/notasCredito' },
         { titulo: 'Guias', url: '/guias' },

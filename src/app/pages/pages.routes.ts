@@ -51,7 +51,7 @@ const pagesRoutes: Routes = [
                 data: { titulo: "Facturas" }
             },
             {
-                path: "factura",
+                path: "factura/:id",
                 component: FacturaComponent,
                 data: { titulo: "Factura" }
             },
@@ -61,9 +61,9 @@ const pagesRoutes: Routes = [
                 data: { titulo: "Retenciones" }
             },
             {
-                path: "retencion",
+                path: "retencion/:id",
                 component: RetencionComponent,
-                data: { titulo: "retencion" }
+                data: { titulo: "Retencion" }
             },
             {
                 path: "guias",
@@ -119,12 +119,12 @@ const pagesRoutes: Routes = [
             {
                 path: "cobros",
                 component: CobrosComponent,
-                data: { titulo: "Cobros" }
+                data: { titulo: "Facturas Pendientes de Pago" }
             },
             {
-                path: "cobro",
+                path: "cobro/:id",
                 component: CobroComponent,
-                data: { titulo: "Cobro" }
+                data: { titulo: "Cuentas por cobrar" }
             },
             /*COMPRAS*/
             {
@@ -135,7 +135,7 @@ const pagesRoutes: Routes = [
             {
                 path: "proveedor",
                 component: ProveedorComponent,
-                data: { titulo: "proveedor" }
+                data: { titulo: "Proveedor" }
             },
             {
                 path: "pagos",
@@ -145,7 +145,7 @@ const pagesRoutes: Routes = [
             {
                 path: "pago",
                 component: PagoComponent,
-                data: { titulo: "pago" }
+                data: { titulo: "Pago" }
             },
             /*INVENTARIOS*/
             {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalProductoService } from 'src/app/services/service.index';
+import { ModalControlService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-factura',
@@ -8,7 +8,7 @@ import { ModalProductoService } from 'src/app/services/service.index';
 })
 export class FacturaComponent implements OnInit {
 
-  constructor( public _modalProducto: ModalProductoService
+  constructor( public _modalControl: ModalControlService
 
   ) { }
 

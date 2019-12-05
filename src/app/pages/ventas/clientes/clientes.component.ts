@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from 'src/app/models/ventas/cliente.model';
 
 @Component({
   selector: 'app-clientes',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesComponent implements OnInit {
 
+  cargando: boolean
+  clientes: Cliente[] = [];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  cambiarDesde(){}
+  borrarCliente(){}
 }

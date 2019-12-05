@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Producto } from 'src/app/models/inventarios/producto.model';
 
 @Component({
   selector: 'app-productos',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
 
+  cargando: boolean = true;
+  productos: Producto[] = []
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  cambiarDesde(){}
+  borrarProducto(){}
 }

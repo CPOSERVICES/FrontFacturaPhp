@@ -36,9 +36,8 @@ import { ProductosComponent } from './inventarios/productos/productos.component'
 import { ProductoComponent } from './inventarios/productos/producto.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { ModalProductoComponent } from '../components/modal-producto/modal-producto.component';
-
-ModalProductoComponent
-
+import { ModalNuevoCobroComponent } from '../components/modal-nuevo-cobro/modal-nuevo-cobro.component';
+  
 
 
 
@@ -72,8 +71,8 @@ ModalProductoComponent
     ProductosComponent,
     ProductoComponent,
     AgendaComponent,
-    ModalProductoComponent
-
+    ModalProductoComponent,
+    ModalNuevoCobroComponent
   ],
   imports: [
     CommonModule,

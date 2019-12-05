@@ -2,12 +2,21 @@
   <div class="col-lg-12">
     <div class="card">
       <div class="card-body">
-        <form class="form pt-3">
 
+        <form class="form pt-3">
           <div class="row pt-3">
             <section class="content">
-
-              <div class="col-12">
+                <div align="right">
+                    <div class="col col-md-3" aling="right">
+                        <div class="btn-group">
+                          <button routerLink="/facturas" type="button" class="btn btn-dark "> <i class="fa fa-file-archive"></i> Listar Facturas</button>
+                        </div>
+                      </div>
+                </div>
+              
+<!-- ************************************************START: FECHA,TIPO,PUNTO_EMISION,SECUENCIAL,AMBIENTE****************************************** -->            
+                <!-- 
+                  <div class="col-12">
                 <div class="box-body">
                   <div class="row">
                     <div class="col-md-2">
@@ -16,13 +25,13 @@
                     </div>
                     <div class="col-md-2">
                       <label>Tipo</label>
-                      <select class="form-control" name="tipo_tecnologia" disabled="" id="tipo_tecnologia">
+                      <select class="form-control" name="" disabled="">
                         <option selected="true" value="1">Electrónica</option>
                       </select>
                     </div>
                     <div class="col-md-2">
                       <label>Punto Emisión</label>
-                      <select class="form-control" disabled="true" id="punto_emision" name="punto_emision">
+                      <select class="form-control" disabled="true"  name="">
                         <option value="1">003-Otros</option>
                         <option selected="true" value="16">002-Caja 2</option>
                         <option value="35">001-General</option>
@@ -31,19 +40,20 @@
                     </div>
                     <div class="col-md-3">
                       <label>Secuencial</label>
-                      <input class="form-control validador_numeroentero" type="number" value="" id="secuencial">
+                      <input class="form-control" type="number">
                     </div>
 
                     <div class="col-md-3">
                       <label>Ambiente</label>
-                      <select class="form-control" name="ambiente" id="ambiente">
+                      <select class="form-control" name="ambiente">
                         <option selected="true" value="1">Pruebas</option>
                       </select>
                     </div>
                   </div>
-                </div>
-              </div>
-
+                </div> 
+              </div>-->
+<!-- ***********************************************END: FECHA,TIPO,PUNTO_EMISION,SECUENCIAL,AMBIENTE************************************* -->                          
+<!-- ***********************************************START: CLIENTE,SURCURSAL,BOTONES****************************************************** -->
               <div class="box">
                 <div class="box-header with-border">
                   <h4 class="box-title">Datos del Comprador</h4>
@@ -63,16 +73,15 @@
 
                     <div class="col col-md-3">
                       <label>Seleccione un Resultado</label>
-                      <select class="form-control" id="clientes">
+                      <select class="form-control">
                         <option value="680">PATRICIO MORA ALVAREZ</option>
-
                       </select>
                     </div>
 
                     <div class="col col-md-3">
                       <label>Sucursal</label>
                       <select class="form-control" id="sucursalesclientes">
-                        <option selected="true" value="940">MATRIZ</option>
+                        <option selected="true" value="">MATRIZ</option>
                       </select>
                     </div>
                     <div class="col col-md-3">
@@ -83,66 +92,64 @@
                     </div>
                   </div>
                 </div>
-
+<!-- ***********************************************END: CLIENTE,SURCURSAL,BOTONES****************************************************** -->                
+<!-- ***********************************************START: TIPO_IDENTIFICACION,NOMBRE,DIRECCION***************************************** -->
                 <div class="box-body">
                   <div class="row">
                     <div class="col col-md-3">
                       <label>Tipo Identificacion</label>
                       <div class="input-group">
-                        <select class="form-control" id="clientes">
+                        <select class="form-control">
                           <option value=""></option>
                         </select>
                       </div>
                     </div>
-
                     <div class="col col-md-3">
-                      <label>Identificacion</label>
-                      <input id="" name="" class="form-control" type="text" value="" placeholder="Ingrese su Busqueda">
+                      <label>Identificación</label>
+                      <input name="" class="form-control" type="text" placeholder="Número de Identificación">
                     </div>
-
                     <div class="col col-md-3">
                       <label>Nombres/Razon Social</label>
-                      <input id="" name="" class="form-control" type="text" value="" placeholder="Ingrese su Busqueda">
+                      <input name="" class="form-control" type="text" placeholder="Nombres/Razon Social">
                     </div>
                     <div class="col col-md-3">
                       <label>Dirección</label>
-                      <input id="" name="" class="form-control" type="text" value="" placeholder="Ingrese su Busqueda">
+                      <input name="" class="form-control" type="text"  placeholder="Dirección">
                     </div>
                   </div>
                 </div>
-
-
+<!-- ***********************************************END: TIPO_IDENTIFICACION,NOMBRE,DIRECCION***************************************** -->
+<!-- *********************************************START: TELEFONO CELULAR,CORREO****************************************************** -->
                 <div class="box-body">
                   <div class="row">
                     <div class="col col-md-3">
-                      <label>Telefono</label>
-                      <input id="" name="" class="form-control" type="text" value="" placeholder="Ingrese su Busqueda">
+                      <label>Teléfono</label>
+                      <input name="" class="form-control" type="text" value="" placeholder="Teléfono">
                     </div>
 
                     <div class="col col-md-3">
                       <label>Celular</label>
-                      <input id="" name="" class="form-control" type="text" value="" placeholder="Ingrese su Busqueda">
+                      <input name="" class="form-control" type="text" value="" placeholder="Celular">
                     </div>
 
                     <div class="col col-md-6">
                       <label>Correo</label>
-                      <input id="" name="" class="form-control" type="text" value="" placeholder="Ingrese su Busqueda">
+                      <input name="" class="form-control" type="email" value="" placeholder="Correo">
                     </div>
                   </div>
                 </div>
-
+<!-- ***********************************************END: TELEFONO CELULAR,CORREO****************************************************** -->
+<!-- ***********************************************START: SUCURSAL,CODIGO_SUCURSAL,PROVINCIA,CIUDAD********************************** -->
                 <div class="box-body">
                   <div class="row">
                     <div class="col col-md-3">
                       <label>Sucursal</label>
-                      <input id="" name="" class="form-control" type="text" value="" placeholder="Ingrese su Busqueda">
+                      <input name="" class="form-control" type="text" value="" placeholder="Sucursal">
                     </div>
-
                     <div class="col col-md-3">
-                      <label>Codigo Sucursal</label>
-                      <input id="" name="" class="form-control" type="text" value="" placeholder="Ingrese su Busqueda">
+                      <label>Código Sucursal</label>
+                      <input name="" class="form-control" type="text" value="" placeholder="Código Sucursal">
                     </div>
-
                     <div class="col col-md-3">
                       <label>Provincia</label>
                       <div class="input-group">
@@ -161,6 +168,7 @@
                     </div>
                   </div>
                 </div>
+<!-- ***********************************************START: SUCURSAL,CODIGO_SUCURSAL,PROVINCIA,CIUDAD********************************** -->
               </div>
 
 
@@ -169,13 +177,14 @@
                 <div class="box-header with-border">
 
                   <h3 class="box-title">Productos y Servicios</h3>
-                  <button (click)="_modalProducto.mostarModal()" type="button" class="btn  btn-primary btn-sm flat"
+                  <button (click)="_modalControl.mostarModal()" type="button" class="btn  btn-primary btn-sm flat"
                     data-toggle="modal" data-target="#modal-productos">
                     <i class="fa fa-search"></i> Buscar / Añadir
                   </button>
                   <app-modal-producto></app-modal-producto>
                 </div>
                 <div class="box-body">
+<!--*****************************************************START: TABLA PRODUCTOS SERVICIOS******************************************  -->
                   <div class="col-md-12">
                     <div class="table-responsive">
                       <table class="table">
@@ -191,36 +200,35 @@
                             <th style="width:35px;">Ice</th>
                             <th style="width:75px;">Iva</th>
                             <th style="width:90px;">Total</th>
-                            <th style="width:20px;"><i class="fa fa-times-circle anadir"></i></th>
+                            <th style="width:20px;">
+                              <!-- <i class="fa fa-times-circle anadir"></i> -->
+                            </th>
                           </tr>
-
                         </thead>
-                        <tbody id="detalleventa">
-
-
-                        </tbody>
+                        <tbody></tbody>
                       </table>
                     </div>
                   </div>
-
-
+<!--*****************************************************END: TABLA PRODUCTOS SERVICIOS******************************************  -->
                 </div>
               </div>
               <!--END PRODUCTS AND SERVICES-->
 
               <div class="row">
-                <!--START PAY FORMS-->
+<!--*****************************************************START: START PAY FORMS***************************************************-->
                 <div class="col-md-6">
                   <div class="box">
                     <div class="box-header with-border">
                       <h3 class="box-title">Forma de Pago</h3>
-                      <button type="button" class="btn  btn-primary btn-sm flat" onclick="anadir_formapago()">
+                      <button type="button" class="btn  btn-primary btn-sm flat">
                         <i class="fa fa-plus"></i> Añadir
                       </button>
+                      <br>
+                      <br>
                     </div>
-                    <div class="box-body">
-                      <table>
-                        <tbody class="tabladatosformadepago">
+                    <div class="box-body table-responsive-sm">
+                      <table class="table-hover">
+                        <tbody>
                           <tr>
                             <td>
                               <div class="row">
@@ -228,7 +236,7 @@
                                   <label>Forma Pago</label>
                                 </div>
                                 <div class="col-md-8">
-                                  <select id="formadepago" class="form-control" name="formadepago">
+                                  <select class="form-control" name="">
                                     <option value="01">Sin utilizacion del sistema financiero</option>
                                   </select>
                                 </div>
@@ -239,11 +247,11 @@
                                 <div class="col-md-8">
                                   <div class="row">
                                     <div class="col-md-6">
-                                      <input id="plazo" name="plazo" type="number" class="form-control"
+                                      <input name="plazo" type="number" class="form-control"
                                         placeholder="Ejm: 30">
                                     </div>
                                     <div class="col-md-6">
-                                      <select id="tiempo" class="form-control" name="tiempo">
+                                      <select class="form-control" name="">
                                         <option selected="" value="ninguno">ninguno</option>
                                         <option value="dias">Dias</option>
                                         <option value="meses">Meses</option>
@@ -251,7 +259,6 @@
                                       </select>
                                     </div>
                                   </div>
-
                                 </div>
                               </div>
                               <br>
@@ -260,43 +267,42 @@
                                   <label>Valor</label>
                                 </div>
                                 <div class="col-md-8">
-                                  <input class="form-control usd2" value="0.00" type="text" placeholder=""
-                                    id="totalformapago">
+                                  <input class="form-control usd2" value="0.00" type="text" placeholder="">
                                 </div>
                               </div>
                             </td>
-                            <td><a id="eliminar_formapago"><i class="fa fa-times-circle anadir"></i></a></td>
+                            <td>
+                              <!-- <a id="eliminar_formapago"><i class="fa fa-times-circle anadir"></i></a> -->
+                            </td>
                           </tr>
                         </tbody>
-
                       </table>
-
-
                     </div>
                   </div>
-
-
+<!--*****************************************************START: START PAY FORMS***************************************************-->
+<!--*****************************************************START: Datos adicionales***************************************************-->
                   <div class="box">
                     <div class="box-header with-border">
                       <h3 class="box-title">Datos adicionales (Opcional) </h3>
-                      <button type="button" class="btn  btn-primary btn-sm flat" data-toggle="modal"
-                        data-target="#modal-default1">
+                      <button type="button" class="btn  btn-primary btn-sm flat" data-toggle="modal" data-target="#modal-default1">
                         <i class="fa fa-plus"></i> Añadir
                       </button>
+                      <br>
+                      <br>
                     </div>
                     <div class="box-body ">
-                      <table class=" table ">
+                      <table class="table">
                         <thead>
                           <tr>
                             <th>Nombre</th>
                             <th>Detalle</th>
                           </tr>
                         </thead>
-                        <tbody id="tabladatosadicianales" class="tabladatosadicianales">
-
+                        <tbody>
                         </tbody>
                       </table>
                     </div>
+<!-- START: MODAL********************************DATOS ADIONALES***************************************** -->
                     <div class="modal fade" id="modal-default1" style="display: none;">
                       <div class="modal-dialog ">
                         <div class="modal-content">
@@ -309,38 +315,44 @@
                             <div class="row">
                               <div class="col-md-2"><b>Nombre</b></div>
                               <div class="col-md-4">
-                                <input id="nombre_adicional" name="nombre_adicional" type="text"
-                                  class="form-control validador_texto300" placeholder="Ejm: Orden">
+                                <input name="" type="text" class="form-control" placeholder="">
                               </div>
                               <div class="col-md-2"><b>Descripción</b></div>
                               <div class="col-md-4">
-                                <input id="detalle_adicional" name="detalle_adicional" type="text"
-                                  class="form-control validador_texto300" placeholder="Ejm: ABCD123">
+                                <input name="" type="text"class="form-control" placeholder="">
                               </div>
                             </div>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-
                             <button class="btn  btn-primary " id="botonanadiracional"> Añadir Adicional</button>
                           </div>
                         </div>
                       </div>
                     </div>
+<!-- END: MODAL********************************DATOS ADIONALES***************************************** -->                    
                   </div>
-
-                  <div class="box">
+<!--*****************************************************START: Datos adicionales***************************************************-->
+<!--*****************************************************START: GUIA**************************************************************-->
+                  <!-- <div class="box">
                     <div class="box-body">
                       <div class="col-md-12">
-                        <div class="col-md-6"><b>Guia de Remisioón (Opcional)</b></div>
-                        <div class="col-md-6"><input type="text" name="guia_remision" id="guia_remision"
-                            class="form-control validador_secuencialdocumento" placeholder="___-___-_________"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                              <label>Guia de Remisión (Opcional)</label>
+                            </div>
+                            <div class="col-md-6">
+                              <input type="text" name="" class="form-control" placeholder="___-___-_________">
+                            </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
+<!--*****************************************************END: GUIA*******************************************************************-->                  
                 </div>
+<!--*****************************************************END: START PAY FORMS***************************************************-->
                 <!--END PAY FORMS-->
-                <!--START TOTAL-->
+<!--**************************************************************************************START: TABLE TOTAL-->
                 <div class="col-md-6">
                   <div class="box">
                     <div class="box-header with-border">
@@ -349,120 +361,105 @@
                     <div class="box-body">
                       <div class="col-md-12">
                         <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Subtotal sin
-                              Impuestos</label></div>
+                          <div class="col-md-6"><label>Subtotal sin Impuestos</label></div>
                           <div class="col-md-6">
-                              <input  class="valorcito form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_subtotal_sinimpuestos"></div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-12">
-                        <div class="form-group row price">
-
-
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Subtotal Iva
-                              12%</label></div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_subtotal_iva12"></div>
-                        </div>
-                      </div>
-
-
-                      <div class="col-md-12">
-                        <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Subtotal 0%</label>
+                            <input class=" form-control" disabled=""  type="text" placeholder="0.00">
                           </div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_subtotal_ivacero"></div>
                         </div>
                       </div>
-
                       <div class="col-md-12">
                         <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Subtotal no objeto
-                              de iva</label></div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_subtotal_noobjeto"></div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-12">
-                        <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Subtotal Exento de
-                              iva</label></div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_subtotal_exento"></div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-12">
-                        <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Total
-                              descuento</label></div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_descuento"></div>
-                        </div>
-                      </div>
-
-
-                      <div class="col-md-12">
-                        <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Valor ICE</label>
+                          <div class="col-md-6"><label>Subtotal Iva 12%</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled="" type="text" placeholder="0.00">
                           </div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_ice"></div>
                         </div>
                       </div>
-
-
                       <div class="col-md-12">
                         <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Valor irbpnr</label>
+                          <div class="col-md-6"><label>Subtotal 0%</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled=""  type="text" placeholder="0.00">
                           </div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_irbpnr"></div>
                         </div>
                       </div>
-
                       <div class="col-md-12">
                         <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Iva 12%</label>
+                          <div class="col-md-6"><label>Subtotal no objeto de iva</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled="" type="text" placeholder="0.00">
                           </div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_iva12"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group row price">
+                          <div class="col-md-6"><label>Subtotal Exento de iva</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled="" type="text" placeholder="0.00">
+                          </div>
                         </div>
                       </div>
 
+                      <div class="col-md-12">
+                        <div class="form-group row price">
+                          <div class="col-md-6"><label>Total descuento</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled="" type="text" placeholder="0.00">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group row price">
+                          <div class="col-md-6"><label>Valor ICE</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled="" type="text"placeholder="0.00">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group row price">
+                          <div class="col-md-6"><label>Valor irbpnr</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled="" type="text" placeholder="0.00" >
+                          </div>
+                        </div>
+                      </div>
 
                       <div class="col-md-12">
                         <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Propina 10%</label>
-                            <input type="checkbox" id="propina" name="propina" value="propina" onclick="propina()">
+                          <div class="col-md-6"><label>Iva 12%</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled=""type="text" placeholder="0.00">
+                          </div>
+                        </div>
+                      </div>
+<!-- ******************************************************************TIP/PROPINA -->
+                      <!-- <div class="col-md-12">
+                        <div class="form-group row price">
+                          <div class="col-md-6"><label>Propina 10%</label>
+                            <input type="checkbox" id="propina" name="propina" >
                           </div>
                           <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
                               placeholder="" id="totales_propina"></div>
                         </div>
-                      </div>
-
+                      </div> -->
+ <!--************************************************************ TIP/PROPINA -->
                       <div class="col-md-12">
                         <div class="form-group row price">
-                          <div class="col-md-6"><label class="form-control-label tvalor" for="l0">Valor Total</label>
+                          <div class="col-md-6"><label>Valor Total</label></div>
+                          <div class="col-md-6">
+                            <input class="form-control" disabled="" type="text" placeholder="0.00">
                           </div>
-                          <div class="col-md-6"><input class="form-control" disabled="" value="0.00" type="text"
-                              placeholder="" id="totales_valortotal"></div>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
                 <!--END TOTAL-->
               </div>
 
-
-              <input type="checkbox" id="reembolso" name="reembolso" value="reembolso" onclick="opcion_reembolso()">Aplica Reembolso de Gastos
-
+<!-- APLICA REEMBOLSO -->
+<!-- <input type="checkbox" id="reembolso" name="reembolso" value="reembolso" onclick="opcion_reembolso()">Aplica Reembolso de Gastos
               <div class="opcion_reembolso" style="display: none;">
                 <div class="row">
                   <div class="box">
@@ -687,8 +684,19 @@
                   </div>
 
                 </div>
-              </div>
-              <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Guardar, Firmar yEnviar</button>
+              </div> -->
+<!-- APLICA REEMBOLSO -->
+                <div align="right">
+                  <div class="card-body">
+                      <button  routerLink="/facturas" class="btn btn-warning">
+                        <i class="fa fa-sign-out-alt"></i> Cancelar
+                      </button>
+                      <button ali type="submit" class="btn btn-success">
+                          <i class="fa fa-save"></i> Guardar, Firmar y Enviar
+                        </button>
+                  </div>
+                </div>
+          
             </section>
           </div>
         </form>

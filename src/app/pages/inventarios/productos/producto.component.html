@@ -1,1 +1,137 @@
-<p>producto works!</p>
+<div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header bg-info">
+          <h4 class="mb-0 text-white">Ingreso nuevo Producto</h4>
+        </div>
+  
+        <form ngNativeValidate #forma="ngForm" (ngSubmit)="registraProducto(forma)">
+  
+          <div class="card-body">
+            <h4 class="card-title">Información del Producto</h4>
+          </div>
+          <hr>
+          <div class="form-body">
+            <div class="card-body">
+  
+              <div class="row pt-3">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label"> Codigo Auxiliar (Opcional) </label>
+                    <input [(ngModel)]="producto" #codigoPrincipal="ngModel" type="text" name="codigoPrincipal" class="form-control" placeholder="Codogo del producto">
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Nombre</label>
+                    <input [(ngModel)]="producto" #nombre="ngModel" type="text" name="nombre" class="form-control" placeholder="Nombre del pruducto" required>
+                      
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Tipo</label>
+                    <select [(ngModel)]="producto" #tipo="ngModel" name="tipo" class="form-control custom-select" required>
+                      <option value="defa">Selecione tipo</option>
+                      <option value="PRODUCTO">Producto</option>
+                      <option value="SERVICIO">Servicio</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Impuesto Irbpnr</label>
+                        <select [(ngModel)]="producto" #impuesto_irbpnr_id="ngModel" name="irbpnr" class="form-control custom-select">
+                            <option value="0">Seleccione % Irbpnr</option>
+                            <option *ngFor="let irbpnr of " [ngValue]="irbpnr.id">{{irbpnr.nombre}}</option> 
+                        </select> 
+                    </div>
+                  </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Descripción</label>
+                    <textarea [(ngModel)]="producto" #detalle="ngModel" class="form-control" name="detalle" rows="5"></textarea>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Impuesto Iva</label>
+                    <select [(ngModel)]="producto" #impuesto_iva_id="ngModel" name="iva" class="form-control custom-select" required>
+                       <option value="0" disabled>Seleccione % Iva</option>
+                       <option *ngFor="let iva of " [ngValue]="iva.id">{{iva.nombre}}</option> 
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label"> Impuesto Ice</label>
+                     <select [(ngModel)]="producto"  #impuesto_ice_id="ngModel" name="ice" class="form-control custom-select">
+                        <option value="0">Seleccione % Ice</option>
+                        <option *ngFor="let ice of " [ngValue]="ice.id">{{ice.nombre}}</option>
+                      </select> 
+                  </div>
+                </div>
+  
+                <div class="col-md-12">
+                  <div class="row pt-4">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="control-label"> Precio 1 </label>
+                        <input [(ngModel)]="producto" type="text" name="precioUnitario" #precioUnitario="ngModel" class="form-control" placeholder="Precio 1" required>
+                      </div>
+                    </div>
+  
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="control-label">Precio 2</label>
+                        <input [(ngModel)]="producto" #precioUnitario1="ngModel" type="text" name="precioUnitario1" class="form-control" placeholder="Precio 2">
+                      </div>
+                    </div>
+  
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="control-label">Precio 3</label>
+                        <input [(ngModel)]="producto" #precioUnitario2="ngModel" type="text" name="precioUnitario2" class="form-control" placeholder="Precio 3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-12">
+                  <div class="row pt-6">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label"> Cantidad </label>
+                        <input [(ngModel)]="producto" type="text" #stock="ngModel" name="stock" class="form-control" placeholder="Cantidad" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Stock Mínimo</label>
+                        <input [(ngModel)]="producto" #stockMinimo="ngModel"  type="text" name="stockMinimo" class="form-control" placeholder="Stock minimo">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <div class="card-body">
+                <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i> Guardar</button>
+                <a type="button" class="btn btn-dark" routerLink="/productos">Cancel</a>
+              </div>
+            </div>
+          </div>
+  
+        </form>
+  
+      </div>
+    </div>
+  </div>
+  

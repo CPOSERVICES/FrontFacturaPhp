@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Proveedor } from 'src/app/models/compras/proveedor.model';
 
 @Component({
   selector: 'app-proveedor',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProveedorComponent implements OnInit {
 
+  proveedor: Proveedor
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  registraProveedor(){}
 
 }

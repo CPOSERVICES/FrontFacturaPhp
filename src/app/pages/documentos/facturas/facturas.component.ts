@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Factura } from 'src/app/models/factura.model';
+import { Factura } from 'src/app/models/documentosElectronicos/factura.model';
+
 
 @Component({
   selector: 'app-facturas',

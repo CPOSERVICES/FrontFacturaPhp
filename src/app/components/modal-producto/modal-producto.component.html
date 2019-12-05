@@ -1,4 +1,4 @@
-<div class="col-md-4" [ngClass]="_modalProducto.oculto">
+<div class="col-md-4" [ngClass]="_modalControl.oculto">
   <div class="card">
     <div class="card-body">
       <h4 class="card-title"><small>Click on image</small></h4>
@@ -8,7 +8,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title" id="myLargeModalLabel">Productos y Servicios</h4>
-              <button (click)="_modalProducto.ocultarModal()" type="button" class="close" aria-hidden="true">×</button>
+              <button (click)="_modalControl.ocultarModal()" type="button" class="close" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
 
@@ -144,7 +144,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button (click)="_modalProducto.ocultarModal()" type="button"
+              <button (click)="_modalControl.ocultarModal()" type="button"
                 class="btn btn-danger waves-effect text-left">Cerrar</button>
               <button type="button" id="botonguardarproductoyanadirarticulo" class="btn btn-primary"
                 disabled="disabled">
