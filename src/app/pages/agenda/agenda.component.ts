@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalControlService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-agenda',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgendaComponent implements OnInit {
 
-  constructor() { }
+  constructor(  public _modalControl: ModalControlService
+
+  ) { }
 
   ngOnInit() {
   }

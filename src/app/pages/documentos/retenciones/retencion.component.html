@@ -1,1 +1,339 @@
-<p>retencion works!</p>
+<div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+  
+          <form class="form pt-3">
+            <div class="row pt-3">
+              <section class="content">
+                  <div align="right">
+                      <div class="col col-md-3" aling="right">
+                          <div class="btn-group">
+                            <button routerLink="/facturas" type="button" class="btn btn-dark "> <i class="fa fa-file-archive"></i> Listar Notas de Crédito</button>
+                          </div>
+                        </div>
+                  </div>
+                
+  <!-- ************************************************START: FECHA,TIPO,PUNTO_EMISION,SECUENCIAL,AMBIENTE****************************************** -->            
+                  <!-- 
+                    <div class="col-12">
+                  <div class="box-body">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label>Fecha</label>
+                        <input type="text" class="form-control" id="fecha" value="2019-12-03">
+                      </div>
+                      <div class="col-md-2">
+                        <label>Tipo</label>
+                        <select class="form-control" name="" disabled="">
+                          <option selected="true" value="1">Electrónica</option>
+                        </select>
+                      </div>
+                      <div class="col-md-2">
+                        <label>Punto Emisión</label>
+                        <select class="form-control" disabled="true"  name="">
+                          <option value="1">003-Otros</option>
+                          <option selected="true" value="16">002-Caja 2</option>
+                          <option value="35">001-General</option>
+                          <option value="1505">900-Caja 2</option>
+                        </select>
+                      </div>
+                      <div class="col-md-3">
+                        <label>Secuencial</label>
+                        <input class="form-control" type="number">
+                      </div>
+  
+                      <div class="col-md-3">
+                        <label>Ambiente</label>
+                        <select class="form-control" name="ambiente">
+                          <option selected="true" value="1">Pruebas</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div> 
+                </div>-->
+  <!-- ***********************************************END: FECHA,TIPO,PUNTO_EMISION,SECUENCIAL,AMBIENTE************************************* -->                          
+  <!-- ***********************************************START: CLIENTE,SURCURSAL,BOTONES****************************************************** -->
+                <div class="box">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">Datos del Comprador</h4>
+                  </div>
+                  <div class="box-body">
+                    <div class="row">
+                      <div class="col col-md-3">
+                        <label>Cliente</label>
+                        <div class="input-group">
+                          <input id="" name="" class="form-control" type="text" value=""
+                            placeholder="Ingrese su Busqueda">
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-primary btn-flat"><i class="fa  fa-search"></i></button>
+                          </span>
+                        </div>
+                      </div>
+  
+                      <div class="col col-md-3">
+                        <label>Seleccione un Resultado</label>
+                        <select class="form-control">
+                          <option value="680">PATRICIO MORA ALVAREZ</option>
+                        </select>
+                      </div>
+  
+                      <div class="col col-md-3">
+                        <label>Sucursal</label>
+                        <select class="form-control" id="sucursalesclientes">
+                          <option selected="true" value="">MATRIZ</option>
+                        </select>
+                      </div>
+                      <div class="col col-md-3">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-success "> <i class="fa fa-plus-square"></i> Nuevo</button>
+                          <button type="button" class="btn btn-warning "> <i class="fa fa-edit"></i> Editar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  <!-- ***********************************************END: CLIENTE,SURCURSAL,BOTONES****************************************************** -->                
+  <!-- ***********************************************START: TIPO_IDENTIFICACION,NOMBRE,DIRECCION***************************************** -->
+                  <div class="box-body">
+                    <div class="row">
+                      <div class="col col-md-3">
+                        <label>Tipo Identificacion</label>
+                        <div class="input-group">
+                          <select class="form-control">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col col-md-3">
+                        <label>Identificación</label>
+                        <input name="" class="form-control" type="text" placeholder="Número de Identificación">
+                      </div>
+                      <div class="col col-md-3">
+                        <label>Nombres/Razon Social</label>
+                        <input name="" class="form-control" type="text" placeholder="Nombres/Razon Social">
+                      </div>
+                      <div class="col col-md-3">
+                        <label>Dirección</label>
+                        <input name="" class="form-control" type="text"  placeholder="Dirección">
+                      </div>
+                    </div>
+                  </div>
+  <!-- ***********************************************END: TIPO_IDENTIFICACION,NOMBRE,DIRECCION***************************************** -->
+  <!-- *********************************************START: TELEFONO CELULAR,CORREO****************************************************** -->
+                  <div class="box-body">
+                    <div class="row">
+                      <div class="col col-md-3">
+                        <label>Teléfono</label>
+                        <input name="" class="form-control" type="text" value="" placeholder="Teléfono">
+                      </div>
+  
+                      <div class="col col-md-3">
+                        <label>Celular</label>
+                        <input name="" class="form-control" type="text" value="" placeholder="Celular">
+                      </div>
+  
+                      <div class="col col-md-6">
+                        <label>Correo</label>
+                        <input name="" class="form-control" type="email" value="" placeholder="Correo">
+                      </div>
+                    </div>
+                  </div>
+  <!-- ***********************************************END: TELEFONO CELULAR,CORREO****************************************************** -->
+  <!-- ***********************************************START: SUCURSAL,CODIGO_SUCURSAL,PROVINCIA,CIUDAD********************************** -->
+                  <div class="box-body">
+                    <div class="row">
+                      <div class="col col-md-3">
+                        <label>Sucursal</label>
+                        <input name="" class="form-control" type="text" value="" placeholder="Sucursal">
+                      </div>
+                      <div class="col col-md-3">
+                        <label>Código Sucursal</label>
+                        <input name="" class="form-control" type="text" value="" placeholder="Código Sucursal">
+                      </div>
+                      <div class="col col-md-3">
+                        <label>Provincia</label>
+                        <div class="input-group">
+                          <select class="form-control" id="clientes">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col col-md-3">
+                        <label>Ciudad</label>
+                        <div class="input-group">
+                          <select class="form-control" id="clientes">
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  <!-- ***********************************************START: SUCURSAL,CODIGO_SUCURSAL,PROVINCIA,CIUDAD********************************** -->
+                </div>
+  
+  
+                <!-- START PRODUCTS AND SERVICES-->
+                <div class="box">
+                  <div class="box-header with-border">
+  
+                    <h3 class="box-title">Impuestos</h3>
+                    <button  type="button" class="btn  btn-primary btn-sm flat"
+                      data-toggle="modal" data-target="#modal-productos">
+                      <i class="fa fa-search"></i> Buscar / Añadir
+                    </button>
+                    <app-modal-producto></app-modal-producto>
+                  </div>
+                  <div class="box-body">
+  <!--*****************************************************START: TABLA PRODUCTOS SERVICIOS******************************************  -->
+                    <div class="col-md-12">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead style="width:100%;">
+                            <tr>
+                              <th style="width:130px;">Código</th>
+                              <th style="width:70px;">Impuesto</th>
+                              <th style="width:90px;">Base Imponible</th>
+                              <th style="width:75px;">Porcentaje</th>
+                              <th style="width:75px;">Total</th>
+                              <th style="width:35px;">Documento</th>
+                              <th style="width:75px;">Fecha</th>
+                              <th style="width:90px;">Tipo</th>
+                              <th style="width:20px;">
+                                <!-- <i class="fa fa-times-circle anadir"></i> -->
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+  <!--*****************************************************END: TABLA PRODUCTOS SERVICIOS******************************************  -->
+                  </div>
+                </div>
+                <!--END PRODUCTS AND SERVICES-->
+  
+                <div class="row">
+  <!--*****************************************************START: START PAY FORMS***************************************************-->
+                  <div class="col-md-6">
+  <!--*****************************************************START: START PAY FORMS***************************************************-->
+  <!--*****************************************************START: Datos adicionales***************************************************-->
+                    <div class="box">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Datos adicionales (Opcional) </h3>
+                        <button type="button" class="btn  btn-primary btn-sm flat" data-toggle="modal" data-target="#modal-default1">
+                          <i class="fa fa-plus"></i> Añadir
+                        </button>
+                        <br>
+                        <br>
+                      </div>
+                      <div class="box-body ">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Nombre</th>
+                              <th>Detalle</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                      </div>
+  <!-- START: MODAL********************************DATOS ADIONALES***************************************** -->
+                      <div class="modal fade" id="modal-default1" style="display: none;">
+                        <div class="modal-dialog ">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span></button>
+                              <h4 class="modal-title">Datos Adicionales</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row">
+                                <div class="col-md-2"><b>Nombre</b></div>
+                                <div class="col-md-4">
+                                  <input name="" type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="col-md-2"><b>Descripción</b></div>
+                                <div class="col-md-4">
+                                  <input name="" type="text"class="form-control" placeholder="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                              <button class="btn  btn-primary " id="botonanadiracional"> Añadir Adicional</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+  <!-- END: MODAL********************************DATOS ADIONALES***************************************** -->                    
+                    </div>
+  <!--*****************************************************START: Datos adicionales***************************************************-->                 
+                  </div>
+  <!--*****************************************************END: START PAY FORMS***************************************************-->
+                  <!--END PAY FORMS-->
+  <!--**************************************************************************************START: TABLE TOTAL-->
+                  <div class="col-md-6">
+                    <div class="box">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Total Retenido</h3>
+                      </div>
+                      <div class="box-body">
+                        <div class="col-md-12">
+                          <div class="form-group row price">
+                            <div class="col-md-6"><label>Iva</label></div>
+                            <div class="col-md-6">
+                              <input class=" form-control" disabled=""  type="text" placeholder="0.00">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group row price">
+                            <div class="col-md-6"><label>Renta</label></div>
+                            <div class="col-md-6">
+                              <input class="form-control" disabled="" type="text" placeholder="0.00">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group row price">
+                            <div class="col-md-6"><label>ISD</label></div>
+                            <div class="col-md-6">
+                              <input class="form-control" disabled=""  type="text" placeholder="0.00">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group row price">
+                            <div class="col-md-6"><label>Total</label></div>
+                            <div class="col-md-6">
+                              <input class="form-control" disabled="" type="text" placeholder="0.00">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--END TOTAL-->
+                </div>
+  
+  
+                  <div align="right">
+                    <div class="card-body">
+                        <button  routerLink="/facturas" class="btn btn-warning">
+                          <i class="fa fa-sign-out-alt"></i> Cancelar
+                        </button>
+                        <button ali type="submit" class="btn btn-success">
+                            <i class="fa fa-save"></i> Guardar, Firmar y Enviar
+                          </button>
+                    </div>
+                  </div>
+            
+              </section>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

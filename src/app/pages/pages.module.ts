@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 /*RUTAS*/
 import { PAGES_ROUTES } from './pages.routes';
@@ -10,8 +10,12 @@ import { SharedModule } from '../shared/shared.module';
 
 /*COMPONENTES*/
 import { PagesComponent } from './pages.component';
+import { AgendaComponent } from './agenda/agenda.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
+/*USUARIO*/
 import { PerfilComponent } from './perfil/perfil.component';
+
 import { FacturasComponent } from './documentos/facturas/facturas.component';
 import { FacturaComponent } from './documentos/facturas/factura.component';
 import { NotasCreditoComponent } from './documentos/notas-credito/notas-credito.component';
@@ -34,11 +38,11 @@ import { PagosComponent } from './compras/pagos/pagos.component';
 import { PagoComponent } from './compras/pagos/pago.component';
 import { ProductosComponent } from './inventarios/productos/productos.component';
 import { ProductoComponent } from './inventarios/productos/producto.component';
-import { AgendaComponent } from './agenda/agenda.component';
+
+/*MODALES*/
 import { ModalProductoComponent } from '../components/modal-producto/modal-producto.component';
 import { ModalNuevoCobroComponent } from '../components/modal-nuevo-cobro/modal-nuevo-cobro.component';
-  
-
+import { ModalAgendaComponent } from '../components/modal-agenda/modal-agenda.component';
 
 
 
@@ -72,7 +76,8 @@ import { ModalNuevoCobroComponent } from '../components/modal-nuevo-cobro/modal-
     ProductoComponent,
     AgendaComponent,
     ModalProductoComponent,
-    ModalNuevoCobroComponent
+    ModalNuevoCobroComponent,
+    ModalAgendaComponent
   ],
   imports: [
     CommonModule,
