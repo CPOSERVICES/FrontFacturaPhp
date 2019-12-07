@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalControlService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-cotizacion',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CotizacionComponent implements OnInit {
 
-  constructor() { }
+  constructor(  public _modalControl: ModalControlService) { }
 
   ngOnInit() {
   }
