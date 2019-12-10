@@ -1,0 +1,121 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" *ngIf="cargando">
+      <div class="card " align="center">
+        <div class="card-body">
+          <div class="col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Plan de Cuentas</h4>
+                <div class="dropify-wrapper">
+                  <!-- <div  class="dropify-message">
+                    <span class="file-icon"></span>
+                    <p>Arrastra y suelta o haz clic para reemplazar</p>
+                    <p class="dropify-error">Ooops, something wrong appended.</p>
+                  </div>  -->
+                  <div class="dropify-loader"></div>
+                  <div class="dropify-errors-container">
+                    <ul></ul>
+                  </div>
+
+                  <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M">
+                  <button type="button" class="dropify-clear">Eliminar</button>
+                  <div class="dropify-preview">
+                    <span class="dropify-render"></span>
+                    <div class="dropify-infos">
+                      <div class="dropify-infos-inner">
+                        <p class="dropify-filename">
+                          <span class="file-icon"></span>
+                          <span class="dropify-filename-inner"></span>
+                        </p>
+                        <p class="dropify-infos-message">xx</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12" *ngIf="!cargando subirExcel">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Plan de Cuentas</h4>
+          <div class="text-right">
+              <button class="btn btn-outline-info">
+                  <i class="fas fa-cloud-download-alt"></i> Descargar Archivo
+              </button>
+              <button (click)="subirArchivo()" class="btn btn-outline-info">
+                  <i class="fas fa-cloud-upload-alt"></i> Subir Nuevo Archivo
+              </button>
+              <button (click)="_modalControl.mostarModal()" class="btn btn-outline-info">
+                  <i class="fa fa-plus-circle"></i> Agregar Nueva Cuenta
+              </button>
+          </div>
+         <br>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Codigo</th>
+                  <th>Nomenclatura</th>
+                  <th>Tipo</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let planCuenta of planCuentas">
+                  <td>{{planCuenta.pgccuenta}}</td>
+                  <td>{{planCuenta.pgcnombre}}</td>
+                  <td>{{planCuenta.pgctipo}}</td>
+                  <td>
+                    <button class="btn btn-outline-success">
+                      <i class="fa fa-pencil-alt"></i>
+                    </button>
+
+                    <button class="btn btn-outline-danger">
+                      <i class="fa fa-trash"></i>
+                    </button>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item ">
+        <a class="page-link" [routerLink]="['/planCuentas',1]" tabindex="-1">Inico</a>
+      </li>
+      <li class="page-item ">
+        <a class="page-link" [routerLink]="['/planCuentas',prev_page]" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" [routerLink]="['/planCuentas']">{{ap}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link">/</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" [routerLink]="['/planCuentas']">{{nm}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" [routerLink]="['/planCuentas',next_page]" href="#">Next</a>
+      </li>
+      <li class="page-item ">
+        <a class="page-link" [routerLink]="['/planCuentas',nm]" tabindex="-1">Fin</a>
+      </li>
+    </ul>
+  </nav>
+
+  <app-modal-subir-excel></app-modal-subir-excel>

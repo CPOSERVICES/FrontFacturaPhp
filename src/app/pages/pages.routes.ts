@@ -27,6 +27,7 @@ import { ProductoComponent } from './inventarios/productos/producto.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { CobrosComponent } from './ventas/cobros/cobros.component';
 import { CobroComponent } from './ventas/cobros/cobro.component';
+import { PlanCuentasComponent } from './plan-cuentas/plan-cuentas.component';
 
 const pagesRoutes: Routes = [
     {
@@ -164,7 +165,17 @@ const pagesRoutes: Routes = [
                 component: AgendaComponent,
                 data: { titulo: "Agenda" }
             },
-
+            /*PLAN DE CUENTAS*/
+            {
+                path: "planCuentas/:page",
+                component: PlanCuentasComponent,
+                data: { titulo: "Plan de Cuentas" }
+            },
+            {
+                path: "planCuentas",
+                component: PlanCuentasComponent,
+                data: { titulo: "Plan de Cuentas" }
+            },
             { path: "", redirectTo: "/dashboard", pathMatch: "full" }
         ]
     }

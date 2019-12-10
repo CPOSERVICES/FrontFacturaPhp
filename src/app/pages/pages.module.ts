@@ -39,10 +39,14 @@ import { PagoComponent } from './compras/pagos/pago.component';
 import { ProductosComponent } from './inventarios/productos/productos.component';
 import { ProductoComponent } from './inventarios/productos/producto.component';
 
+/*ATS*/
+import { PlanCuentasComponent } from './plan-cuentas/plan-cuentas.component';
+
 /*MODALES*/
 import { ModalProductoComponent } from '../components/modal-producto/modal-producto.component';
 import { ModalNuevoCobroComponent } from '../components/modal-nuevo-cobro/modal-nuevo-cobro.component';
 import { ModalAgendaComponent } from '../components/modal-agenda/modal-agenda.component';
+import { ModalSubirExcelComponent } from '../components/modal-subir-excel/modal-subir-excel.component';
 
 
 
@@ -77,7 +81,9 @@ import { ModalAgendaComponent } from '../components/modal-agenda/modal-agenda.co
     AgendaComponent,
     ModalProductoComponent,
     ModalNuevoCobroComponent,
-    ModalAgendaComponent
+    ModalAgendaComponent,
+    ModalSubirExcelComponent,
+    PlanCuentasComponent
   ],
   imports: [
     CommonModule,

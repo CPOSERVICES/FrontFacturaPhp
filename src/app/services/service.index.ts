@@ -35,6 +35,10 @@ export { IvaService } from './impuestos/iva.service';
 export { IceService } from './impuestos/ice.service';
 export { IrbpnrService } from './impuestos/irbpnr.service';
 
+/*SERVICES ATS*/
+    /*PLAN DE CUENTAS*/
+export { PlanCuentasService } from './ats/plan-cuentas.service';
+
 
 
 

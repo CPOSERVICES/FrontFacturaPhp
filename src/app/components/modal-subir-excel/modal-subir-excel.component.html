@@ -1,0 +1,53 @@
+<div class="col-md-4" [ngClass]="_modalControl.oculto">
+  <div class="card">
+    <div class="card-body">
+      <!-- sample modal content -->
+      <div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        style="display: block;" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myLargeModalLabel">
+                Agregar Nueva Cuenta
+              </h4>
+              <button (click)="_modalControl.ocultarModal()" type="button" class="close" aria-hidden="true">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <form role="form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="control-label">Escoja un Cuenta</label>
+                    <select class="form-control form-white" name="category-color">
+                      <option value="success">Principal</option>
+                      <option value="danger">Secundaria</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-9">
+                          <label class="control-label">Nombre de Nueva Cuenta</label>
+                          <input class="form-control" type="text" placeholder="Nombre de la Cuenta">
+                        </div>
+                      </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button (click)="_modalControl.ocultarModal()" type="button"
+                class="btn btn-danger waves-effect text-left">
+                Cerrar
+              </button>
+              <button type="button" id="botonanadiralcarritoycerrar" class="btn btn-success">
+                Guardar
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    </div>
+  </div>
+</div>

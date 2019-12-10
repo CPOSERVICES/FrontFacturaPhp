@@ -7,6 +7,7 @@ const appRoutes: Routes = [
 
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
+    {path: 'logout/:sure', component: LoginComponent},
     { path: '**', component: PagenofoundComponent }
 ];
 

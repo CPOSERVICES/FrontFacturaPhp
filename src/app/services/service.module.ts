@@ -6,7 +6,8 @@ import {
   SharedService,
   LoginGuardGuard,
   UsuarioService,
-  ModalControlService
+  ModalControlService,
+  PlanCuentasService
 } from "./service.index";
 
 @NgModule({
@@ -16,7 +17,8 @@ import {
     SidebarService,
     SharedService,
     UsuarioService,
-    ModalControlService
+    ModalControlService,
+    PlanCuentasService
     //ProductoService,
     //IvaService,
     //IceService,

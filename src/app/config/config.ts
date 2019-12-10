@@ -1,1 +1,1 @@
-export const URL_SERVICES = '';
+export const URL_SERVICES = 'http://192.168.0.107/backscp/public';
