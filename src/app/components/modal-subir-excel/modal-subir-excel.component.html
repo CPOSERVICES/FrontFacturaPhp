@@ -15,33 +15,38 @@
               </button>
             </div>
             <div class="modal-body">
-              <form role="form">
+              <form #forma="ngForm" (ngSubmit)="crearCuenta( forma )">
                 <div class="row">
                   <div class="col-md-6">
                     <label class="control-label">Escoja un Cuenta</label>
-                    <select class="form-control form-white" name="category-color">
-                      <option value="success">Principal</option>
-                      <option value="danger">Secundaria</option>
+                    <select [(ngModel)]="planCuentas.pgccuenta" name="pgccuenta" class="form-control">
+                      <option value="" selected disabled>Seleccione Cuenta</option>
+                      <option *ngFor="let lista of listaCuentas" [ngValue]="lista.pgccuenta"> {{lista.pgccuenta}} - {{lista.pgcnombre}}</option>
                     </select>
                   </div>
                 </div>
                 <div class="row">
-                        <div class="col-md-9">
-                          <label class="control-label">Nombre de Nueva Cuenta</label>
-                          <input class="form-control" type="text" placeholder="Nombre de la Cuenta">
-                        </div>
-                      </div>
+                  <div class="col-md-9">
+                    <label class="control-label">Nombre de Nueva Cuenta</label>
+                    <input [(ngModel)]="planCuentas.pgccuenta" name="cuenta" class="form-control" type="text" placeholder=" Cuenta">
+                    <input [(ngModel)]="planCuentas.pgcnombre" name="nombre" class="form-control" type="text" placeholder="Nombre de la Cuenta">
+                    <input [(ngModel)]="planCuentas.pgctipo" name="tipo" class="form-control" type="text" placeholder="Tipo">
+                      
+                  </div>
+                </div>
+                <br>
+                <div class="modal-footer">
+                  <button (click)="_modalControl.ocultarModal()" type="button"
+                    class="btn btn-danger waves-effect text-left">
+                    Cerrar
+                  </button>
+                  <button type="submit" class="btn btn-success">
+                    <i class="fa fa-save"></i> Guardar
+                  </button>
+                </div>
               </form>
             </div>
-            <div class="modal-footer">
-              <button (click)="_modalControl.ocultarModal()" type="button"
-                class="btn btn-danger waves-effect text-left">
-                Cerrar
-              </button>
-              <button type="button" id="botonanadiralcarritoycerrar" class="btn btn-success">
-                Guardar
-              </button>
-            </div>
+
           </div>
           <!-- /.modal-content -->
         </div>

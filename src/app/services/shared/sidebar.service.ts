@@ -44,12 +44,12 @@ export class SidebarService {
         { titulo: 'Productos', url: '/productos' },
       ]
     },
-    {
+    /*{
       titulo: 'Contabilidad',
       icono: 'ti-email',
       submenu: [
         { titulo: 'ATS', url: '' },
       ]
-    },
+    },*/
   ];
 }

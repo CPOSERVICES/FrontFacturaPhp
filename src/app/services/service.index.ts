@@ -1,3 +1,6 @@
+
+
+
 /*PAGES SERVICES*/
 export { LoginGuardGuard } from './guards/login-guard.guard';
 
@@ -10,6 +13,7 @@ export { SharedService } from './shared/shared.service';
 
 /*MODALS SERVICES*/
 export { ModalControlService } from '../components/services/modal-control.service';
+export { ModalUpdateService } from '../components/modal-update-plan/modal-update.service';
 
 /*SALES SERVICES*/
 export { CotizacionService } from './ventas/cotizacion.service';

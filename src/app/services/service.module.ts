@@ -7,6 +7,7 @@ import {
   LoginGuardGuard,
   UsuarioService,
   ModalControlService,
+  ModalUpdateService,
   PlanCuentasService
 } from "./service.index";
 
@@ -18,6 +19,7 @@ import {
     SharedService,
     UsuarioService,
     ModalControlService,
+    ModalUpdateService,
     PlanCuentasService
     //ProductoService,
     //IvaService,

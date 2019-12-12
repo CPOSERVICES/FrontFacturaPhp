@@ -8,7 +8,7 @@
               <div class="card-body">
                 <h4 class="card-title">Plan de Cuentas</h4>
                 <div class="dropify-wrapper">
-                  <!-- <div  class="dropify-message">
+                   <!-- <div  class="dropify-message">
                     <span class="file-icon"></span>
                     <p>Arrastra y suelta o haz clic para reemplazar</p>
                     <p class="dropify-error">Ooops, something wrong appended.</p>
@@ -49,9 +49,9 @@
               <button class="btn btn-outline-info">
                   <i class="fas fa-cloud-download-alt"></i> Descargar Archivo
               </button>
-              <button (click)="subirArchivo()" class="btn btn-outline-info">
+              <!-- <button class="btn btn-outline-info">
                   <i class="fas fa-cloud-upload-alt"></i> Subir Nuevo Archivo
-              </button>
+              </button> -->
               <button (click)="_modalControl.mostarModal()" class="btn btn-outline-info">
                   <i class="fa fa-plus-circle"></i> Agregar Nueva Cuenta
               </button>
@@ -61,8 +61,8 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Codigo</th>
-                  <th>Nomenclatura</th>
+                  <th>Cuenta</th>
+                  <th>Nombre</th>
                   <th>Tipo</th>
                   <th>Acción</th>
                 </tr>
@@ -73,14 +73,12 @@
                   <td>{{planCuenta.pgcnombre}}</td>
                   <td>{{planCuenta.pgctipo}}</td>
                   <td>
-                    <button class="btn btn-outline-success">
+                    <button  (click)="_modalUpload.mostarModalUpdate(planCuenta.pgcid)" class="btn btn-outline-success">
                       <i class="fa fa-pencil-alt"></i>
                     </button>
-
-                    <button class="btn btn-outline-danger">
+                    <button (click)="deleteCuenta(planCuenta.pgcid)" class="btn btn-outline-danger">
                       <i class="fa fa-trash"></i>
                     </button>
-
                   </td>
                 </tr>
               </tbody>
@@ -119,3 +117,5 @@
   </nav>
 
   <app-modal-subir-excel></app-modal-subir-excel>
+  <app-modal-update-plan></app-modal-update-plan>
+  

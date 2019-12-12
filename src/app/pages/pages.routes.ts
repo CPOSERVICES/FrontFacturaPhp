@@ -171,11 +171,11 @@ const pagesRoutes: Routes = [
                 component: PlanCuentasComponent,
                 data: { titulo: "Plan de Cuentas" }
             },
-            {
-                path: "planCuentas",
-                component: PlanCuentasComponent,
-                data: { titulo: "Plan de Cuentas" }
-            },
+             {
+                 path: "planCuentas",
+                 component: PlanCuentasComponent,
+                 data: { titulo: "Plan de Cuentas" }
+             },
             { path: "", redirectTo: "/dashboard", pathMatch: "full" }
         ]
     }

@@ -1,0 +1,63 @@
+<div class="col-md-4" [ngClass]="_modalUpdate.oculto">
+  <div class="card">
+    <div class="card-body">
+      <!-- sample modal content -->
+      <div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        style="display: block;" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myLargeModalLabel">
+                Actualizar Cuenta
+              </h4>
+              <button (click)="_modalUpdate.ocultarModalUpdate()" type="button" class="close" aria-hidden="true">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <form #forma="ngForm" (ngSubmit)="this._modalUpdate.updateCuenta( forma )" >
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="control-label">Número de Cuenta</label>
+                    <input [(ngModel)]="this._modalUpdate.pgccuenta" name="pgccuenta" class="form-control" 
+                      type="text" placeholder=" Cuenta">
+                      <input [(ngModel)]="this._modalUpdate.pgcid" name="pgcid" type="hidden">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="control-label">Tipo Cuenta</label>
+                    <!-- [(ngModel)]="planCuenta.pgccuenta" -->
+                    <input [ngModel]="this._modalUpdate.pgctipo"  name="pgctipo" class="form-control" type="text" 
+                      placeholder="Tipo">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-9">
+                    <label class="control-label">Nombre Cuenta</label>
+                    <input [(ngModel)]="this._modalUpdate.pgcnombre" name="pgcnombre" class="form-control" type="text"
+                      placeholder="Nombre de la Cuenta">
+                  </div>
+                </div>
+
+                <br>
+                <div class="modal-footer">
+                  <button (click)="this._modalUpdate.ocultarModalUpdate()" type="button" class="btn btn-danger waves-effect text-left">
+                    <i class="fa fa-close"></i> Cerrar
+                  </button>
+                  <button type="submit" class="btn btn-success">
+                    <i class="fa fa-save"></i> Actualizar
+                  </button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    </div>
+  </div>
+</div>

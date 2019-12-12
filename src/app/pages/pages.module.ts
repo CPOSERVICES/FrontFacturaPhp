@@ -47,6 +47,7 @@ import { ModalProductoComponent } from '../components/modal-producto/modal-produ
 import { ModalNuevoCobroComponent } from '../components/modal-nuevo-cobro/modal-nuevo-cobro.component';
 import { ModalAgendaComponent } from '../components/modal-agenda/modal-agenda.component';
 import { ModalSubirExcelComponent } from '../components/modal-subir-excel/modal-subir-excel.component';
+import { ModalUpdatePlanComponent } from '../components/modal-update-plan/modal-update-plan.component';
 
 
 
@@ -83,6 +84,7 @@ import { ModalSubirExcelComponent } from '../components/modal-subir-excel/modal-
     ModalNuevoCobroComponent,
     ModalAgendaComponent,
     ModalSubirExcelComponent,
+    ModalUpdatePlanComponent,
     PlanCuentasComponent
   ],
   imports: [
@@ -104,6 +106,8 @@ import { ModalSubirExcelComponent } from '../components/modal-subir-excel/modal-
     RetencionComponent,
     GuiasComponent,
     GuiaComponent,
+    ModalSubirExcelComponent,
+    ModalUpdatePlanComponent
   ]
 })
 export class PagesModule { }

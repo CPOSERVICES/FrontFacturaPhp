@@ -5,7 +5,9 @@ import {
   ModalControlService
 } from "src/app/services/service.index";
 import { PlanCuentas } from "src/app/models/ats/planCuentas.model";
-import { Router, ActivatedRoute, Params } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
+import Swal from 'sweetalert2';
+import { ModalUpdateService } from 'src/app/components/modal-update-plan/modal-update.service';
 
 @Component({
   selector: "app-plan-cuentas",
@@ -14,7 +16,10 @@ import { Router, ActivatedRoute, Params } from "@angular/router";
   providers: [UsuarioService, PlanCuentasService]
 })
 export class PlanCuentasComponent implements OnInit {
+
   planCuentas: PlanCuentas[] = [];
+  planCuenta: PlanCuentas;
+  status: string;
 
   cargando: boolean = true;
   subirExcel: boolean = true;
@@ -22,24 +27,21 @@ export class PlanCuentasComponent implements OnInit {
   identity: string;
   prev_page: number;
   next_page: number;
-  public number_pages;
+  number_pages: any;
+  nm: number;
+  ap: number;
 
-  public nm;
-
-  public ap;
-
-  constructor(
-    public _usuario: UsuarioService,
-    public _planCuentas: PlanCuentasService,
-    public activatedRoute: ActivatedRoute,
-    public _modalControl :ModalControlService 
+  constructor(  public _usuario: UsuarioService,
+                public _planCuentas: PlanCuentasService,
+                public _modalControl :ModalControlService,
+                public _modalUpload: ModalUpdateService,
+                public activatedRoute: ActivatedRoute,
   ) {
     this.identity = this._usuario.getIdentity();
     this.token = this._usuario.getToken();
   }
 
   ngOnInit() {
-    this.subirArchivo();
     this.activatedRoute.params.subscribe(params => {
       var page = +params["page"];
       if (!page) {
@@ -47,7 +49,6 @@ export class PlanCuentasComponent implements OnInit {
         this.prev_page = 1;
         this.next_page = 2;
       }
-
       this.cargarPlanCuentas(page);
       this.actualPageVideos();
     });
@@ -71,6 +72,7 @@ export class PlanCuentasComponent implements OnInit {
     this._planCuentas.getPlanCuentas(this.token, page).subscribe(
       resp => {
         this.planCuentas = resp.data;
+        //console.log('plan', this.planCuentas);
         var number_pages = [];
         this.nm = resp.total_page;
         for (var i = 1; i <= resp.total_page; i++) {
@@ -97,14 +99,32 @@ export class PlanCuentasComponent implements OnInit {
     );
   }
 
-  subirArchivo(){
-    if ( this.cargando === true){
-      this.subirExcel = false;
-      
-    } else {
-      this.subirExcel = true;
-      this.cargando = false;
-      console.log('x')
-    }
+  deleteCuenta( id ){
+    Swal.fire({
+      title: 'Estas seguro?',
+      text: 'Se eliminara: ',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Eliminar',
+
+    }).then((borrar) => {
+      if (borrar.value) {
+        this._planCuentas.delete( this.token, id )
+                .subscribe( resp => {this.actualPageVideos() 
+                      Swal.fire({
+                        showConfirmButton: false,
+                        timer: 1500,
+                        title: resp.message,
+                        icon: resp.status,
+                      });
+                });
+      }
+    });
   }
+
+
+
+
 }
