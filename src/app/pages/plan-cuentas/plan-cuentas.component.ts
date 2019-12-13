@@ -5,31 +5,33 @@ import {
   ModalControlService
 } from "src/app/services/service.index";
 import { PlanCuentas } from "src/app/models/ats/planCuentas.model";
-import { Router, ActivatedRoute } from "@angular/router";
-import Swal from 'sweetalert2';
 import { ModalUpdateService } from 'src/app/components/modal-update-plan/modal-update.service';
+import { ActivatedRoute } from "@angular/router";
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: "app-plan-cuentas",
   templateUrl: "./plan-cuentas.component.html",
-  styles: [],
-  providers: [UsuarioService, PlanCuentasService]
+  styleUrls: ['./plan-cuentas.component.css'],
 })
+
 export class PlanCuentasComponent implements OnInit {
 
   planCuentas: PlanCuentas[] = [];
   planCuenta: PlanCuentas;
-  status: string;
-
   cargando: boolean = true;
-  subirExcel: boolean = true;
   token: string;
-  identity: string;
+  cuentas: any;
+
   prev_page: number;
   next_page: number;
   number_pages: any;
   nm: number;
   ap: number;
+  total_page: number;
+  cachedData:any;
+  cachedUrl: any;
 
   constructor(  public _usuario: UsuarioService,
                 public _planCuentas: PlanCuentasService,
@@ -37,9 +39,10 @@ export class PlanCuentasComponent implements OnInit {
                 public _modalUpload: ModalUpdateService,
                 public activatedRoute: ActivatedRoute,
   ) {
-    this.identity = this._usuario.getIdentity();
     this.token = this._usuario.getToken();
+    this.planCuenta = new PlanCuentas(0,'','','');
   }
+
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
@@ -49,12 +52,21 @@ export class PlanCuentasComponent implements OnInit {
         this.prev_page = 1;
         this.next_page = 2;
       }
+      
       this.cargarPlanCuentas(page);
-      this.actualPageVideos();
+      this.actualPageCuentas();
+      //this.cuentas = this.cargarPlanCuentas(page);
+     // console.log('x',this.cuentas);
+     
     });
+   
   }
 
-  actualPageVideos() {
+  
+/*==========================================================
+PAGINA ACTUAL
+===========================================================*/
+  actualPageCuentas() {
     this.activatedRoute.params.subscribe(params => {
       var page = +params["page"];
       if (!page) {
@@ -67,31 +79,35 @@ export class PlanCuentasComponent implements OnInit {
     });
   }
 
+/*==========================================================
+LISTA PLAN DE CUENTAS
+===========================================================*/
   cargarPlanCuentas(page) {
     this.cargando = true;
     this._planCuentas.getPlanCuentas(this.token, page).subscribe(
       resp => {
         this.planCuentas = resp.data;
-        //console.log('plan', this.planCuentas);
+        
+        //this.cuentas = resp.data;
+        //console.log('a', this.cuentas);
+        
         var number_pages = [];
-        this.nm = resp.total_page;
-        for (var i = 1; i <= resp.total_page; i++) {
-          number_pages.push(i);
-        }
-        this.number_pages = number_pages;
-        if (page >= 2) {
-          this.prev_page = page - 1;
-        } else {
-          this.prev_page = 1;
-        }
-
-        if (page < resp.total_page) {
-          this.next_page = page + 1;
-        } else {
-          this.next_page = resp.total_page;
-        }
+    this.nm = resp.total_page;
+    for (var i = 1; i <= resp.total_page; i++) {
+      number_pages.push(i);
+    }
+    this.number_pages = number_pages;
+    if (page >= 2) {
+      this.prev_page = page - 1;
+    } else {
+      this.prev_page = 1;
+    }
+    if (page < resp.total_page) {
+      this.next_page = page + 1;
+    } else {
+      this.next_page = resp.total_page;
+    }
         this.cargando = false;
-        this.subirExcel = true;
       },
       error => {
         console.log(error);
@@ -99,6 +115,13 @@ export class PlanCuentasComponent implements OnInit {
     );
   }
 
+/*==========================================================
+PAGINADOR
+===========================================================*/
+ 
+/*==========================================================
+ELIMINA UNA CUENTA
+===========================================================*/
   deleteCuenta( id ){
     Swal.fire({
       title: 'Estas seguro?',
@@ -108,11 +131,11 @@ export class PlanCuentasComponent implements OnInit {
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Eliminar',
-
-    }).then((borrar) => {
+    })
+    .then( (borrar) => {
       if (borrar.value) {
         this._planCuentas.delete( this.token, id )
-                .subscribe( resp => {this.actualPageVideos() 
+                .subscribe( resp => {this.actualPageCuentas() 
                       Swal.fire({
                         showConfirmButton: false,
                         timer: 1500,
@@ -122,9 +145,6 @@ export class PlanCuentasComponent implements OnInit {
                 });
       }
     });
-  }
-
-
-
+  }    
 
 }

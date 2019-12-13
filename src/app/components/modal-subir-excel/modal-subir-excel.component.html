@@ -7,10 +7,10 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="myLargeModalLabel">
+              <h4 class="modal-title">
                 Agregar Nueva Cuenta
               </h4>
-              <button (click)="_modalControl.ocultarModal()" type="button" class="close" aria-hidden="true">
+              <button (click)="_modalControl.ocultarModal()" (click)="dataChanged()" type="button" class="close" aria-hidden="true">
                 ×
               </button>
             </div>
@@ -19,7 +19,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <label class="control-label">Escoja un Cuenta</label>
-                    <select [(ngModel)]="planCuentas.pgccuenta" name="pgccuenta" class="form-control">
+                    <select (ngModelChange)="dataChanged($event)" [(ngModel)]="planCuentas.pgccuenta" name="pgccuenta" class="form-control">
                       <option value="" selected disabled>Seleccione Cuenta</option>
                       <option *ngFor="let lista of listaCuentas" [ngValue]="lista.pgccuenta"> {{lista.pgccuenta}} - {{lista.pgcnombre}}</option>
                     </select>
@@ -30,7 +30,7 @@
                     <label class="control-label">Nombre de Nueva Cuenta</label>
                     <input [(ngModel)]="planCuentas.pgccuenta" name="cuenta" class="form-control" type="text" placeholder=" Cuenta">
                     <input [(ngModel)]="planCuentas.pgcnombre" name="nombre" class="form-control" type="text" placeholder="Nombre de la Cuenta">
-                    <input [(ngModel)]="planCuentas.pgctipo" name="tipo" class="form-control" type="text" placeholder="Tipo">
+                    <input [(ngModel)]="planCuentas.pgctipo" value="M" name="tipo" class="form-control" type="hidden" placeholder="Tipo">
                       
                   </div>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="modal-footer">
                   <button (click)="_modalControl.ocultarModal()" type="button"
                     class="btn btn-danger waves-effect text-left">
-                    Cerrar
+                    <i class="fas fa-times"></i> Cerrar
                   </button>
                   <button type="submit" class="btn btn-success">
                     <i class="fa fa-save"></i> Guardar

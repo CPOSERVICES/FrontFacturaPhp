@@ -66,7 +66,6 @@ CARGA O LISTA PLAN DE CUENTAS POR ID
           .set('Content-Type', 'application/x-www-form-urlencoded')
           .set('Authorization', token);
           let url = URL_SERVICES + '/accountgeneral/find/' + id;
-          console.log('url', url)
   return this.http.get( url,  {headers});
 }
 
@@ -87,7 +86,6 @@ CREA CUENTA
 ACTUALIZA CUENTA SOLO SECUNADARIA
 ===========================================================*/
   update(token, cuenta): Observable<any> {
-    console.log('cuentaxxxxx', cuenta);
     const json = JSON.stringify(cuenta);
     const params = 'json=' + json;
     const headers = new HttpHeaders()

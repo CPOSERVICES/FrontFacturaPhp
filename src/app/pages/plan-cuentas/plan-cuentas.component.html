@@ -1,6 +1,14 @@
-<div class="container">
+<!-- <div class="jsgrid-load-shader"
+style="display: block; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 1000;">
+</div> -->
+<div align="center" *ngIf="cargando" 
+class="jsgrid-load-panel text-center" style="display: block; position: absolute;  z-index: 1000; top: 30%; left: 40%;">
+  Cargando...
+</div>
+
+<div class="container" *ngIf="!cargando">
   <div class="row">
-    <div class="col-md-12" *ngIf="cargando">
+    <!-- <div class="col-md-12" *ngIf="cargando">
       <div class="card " align="center">
         <div class="card-body">
           <div class="col-lg-6 col-md-6">
@@ -8,11 +16,11 @@
               <div class="card-body">
                 <h4 class="card-title">Plan de Cuentas</h4>
                 <div class="dropify-wrapper">
-                   <!-- <div  class="dropify-message">
+                    <div  class="dropify-message">
                     <span class="file-icon"></span>
                     <p>Arrastra y suelta o haz clic para reemplazar</p>
                     <p class="dropify-error">Ooops, something wrong appended.</p>
-                  </div>  -->
+                  </div> 
                   <div class="dropify-loader"></div>
                   <div class="dropify-errors-container">
                     <ul></ul>
@@ -39,7 +47,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="col-12" *ngIf="!cargando subirExcel">
       <div class="card">
@@ -87,9 +95,10 @@
         </div>
       </div>
     </div>
-
-
   </div>
+
+  
+
   <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
       <li class="page-item ">
@@ -115,7 +124,34 @@
       </li>
     </ul>
   </nav>
-
+</div>
   <app-modal-subir-excel></app-modal-subir-excel>
   <app-modal-update-plan></app-modal-update-plan>
   
+
+  <!-- <div>
+    <li *ngFor="let planCuenta of planCuentas" class="dd-item dd-collapsed" data-id="15"><button data-action="collapse" type="button" style="display: none;">Collapse</button><button data-action="expand" type="button">Expand</button>
+      <div class="dd-handle">{{planCuenta.pgccuenta}}</div>
+      <ol  class="dd-list" style="display: none;">
+          <li class="dd-item" data-id="16">
+              <div class="dd-handle"></div>
+          </li>
+          <li class="dd-item" data-id="17">
+              <div class="dd-handle">Item 17</div>
+          </li>
+          <li class="dd-item" data-id="18">
+              <div class="dd-handle">Item 18</div>
+          </li>
+          <li class="dd-item" data-id="16">
+              <div class="dd-handle">Item 19</div>
+          </li>
+          <li class="dd-item" data-id="17">
+              <div class="dd-handle">Item 20</div>
+          </li>
+          <li class="dd-item" data-id="18">
+              <div class="dd-handle">Item 21</div>
+          </li>
+      </ol>
+  </li>
+
+  </div> -->

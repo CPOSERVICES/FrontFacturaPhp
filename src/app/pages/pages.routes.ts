@@ -28,12 +28,13 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { CobrosComponent } from './ventas/cobros/cobros.component';
 import { CobroComponent } from './ventas/cobros/cobro.component';
 import { PlanCuentasComponent } from './plan-cuentas/plan-cuentas.component';
+import { LoginGuardGuard } from '../services/service.index';
 
 const pagesRoutes: Routes = [
     {
         path: "",
         component: PagesComponent,
-        //canActivate: ,
+        //canActivate: [LoginGuardGuard],
         children: [
             {
                 path: "dashboard",

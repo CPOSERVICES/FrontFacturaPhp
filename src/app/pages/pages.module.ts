@@ -7,6 +7,7 @@ import { PAGES_ROUTES } from './pages.routes';
 
 /*MODULOS*/
 import { SharedModule } from '../shared/shared.module';
+import { PipesModule } from '../pipes/pipes.module';
 
 /*COMPONENTES*/
 import { PagesComponent } from './pages.component';
@@ -50,7 +51,7 @@ import { ModalSubirExcelComponent } from '../components/modal-subir-excel/modal-
 import { ModalUpdatePlanComponent } from '../components/modal-update-plan/modal-update-plan.component';
 
 
-
+ 
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { ModalUpdatePlanComponent } from '../components/modal-update-plan/modal-
     CommonModule,
     SharedModule,
     FormsModule,
-    PAGES_ROUTES
+    PAGES_ROUTES,
+    PipesModule 
   ],
   exports:[
     DashboardComponent,

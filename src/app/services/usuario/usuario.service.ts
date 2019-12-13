@@ -13,22 +13,24 @@ export class UsuarioService {
   token: string = '';
   user: Usuario;
   identity: string;
+  compruebaToken: string;
 
   constructor(  public http: HttpClient
 
   ) { 
     this.getIdentity();
+   this.compruebaToken = this.getToken();
+   //console.log(this.compruebaToken);
   }
 
 /*==========================================================
 CONFIRMA SI ESTA LOGUEADO O NO
 ===========================================================*/
   estalogueado() {
-    // ( this.token > 5 )? true : false
-    return true;
+    //return ( this.getToken().length > 5 || this.getToken() !== null)? true : false;
   }
 
-  signup(user, gettoken = null): Observable<any> {
+  signup( user, gettoken = null): Observable<any> {
   
     if(gettoken != null) {
         user.gettoken = 'true';
@@ -36,15 +38,13 @@ CONFIRMA SI ESTA LOGUEADO O NO
     const json = JSON.stringify(user);
     const params = 'json=' + json;
     const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
-  
-    return this.http.post( URL_SERVICES + '/login', params, {headers});
-  
+    let url = URL_SERVICES + '/login';
+    return this.http.post( url, params, {headers});
   }
 
   getIdentity() {
     const identity = JSON.parse(localStorage.getItem('identity'));
-  
-    // tslint:disable-next-line: triple-equals
+
     if (identity && identity != 'undefined' ){
         this.identity = identity;
     } else {
@@ -64,14 +64,13 @@ CONFIRMA SI ESTA LOGUEADO O NO
    }
 
    update(token, user): Observable<any> {
-
     const json = JSON.stringify(user);
     const params = 'json=' + json;
-    const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
-                                     .set('Authorization', token);
-
-    return this.http.put(URL_SERVICES + '/user/edit', params, {headers});
-
-}
+    const headers = new HttpHeaders()
+            .set('Content-Type', 'application/x-www-form-urlencoded')
+            .set('Authorization', token);
+            let url = URL_SERVICES + '/user/edit';
+    return this.http.put(url, params, {headers});
+  }
 
 }

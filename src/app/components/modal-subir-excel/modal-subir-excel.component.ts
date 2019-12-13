@@ -16,11 +16,13 @@ import Swal from 'sweetalert2';
 })
 
 export class ModalSubirExcelComponent implements OnInit {
+  listaCuentas: PlanCuentas[] = [];
   planCuentas: PlanCuentas;
   token: string;
-  listaCuentas: PlanCuentas[] = [];
+ 
   status: string;
   identity: string;
+  nuevaCuenta: number;
 
   constructor(
     public _modalControl: ModalControlService,
@@ -34,6 +36,7 @@ export class ModalSubirExcelComponent implements OnInit {
 
   ngOnInit() {
     this.listarTipoCuenta();
+    //this.dataChanged(event);
   }
 
   listarTipoCuenta() {
@@ -41,13 +44,16 @@ export class ModalSubirExcelComponent implements OnInit {
       .listaCuentasPrimarias(this.token)
       .subscribe((resp: any) => {
         this.listaCuentas = resp.data;
+
+        //console.log('nuevaCuenta', this.nuevaCuenta)
+
       });
   }
 
   crearCuenta(forma) {
     this._planCuentas.create(this.token, this.planCuentas).subscribe(
       response => {
-        console.log("resp", response);
+        //console.log("resp", response);
         if (response.status == "success") {
           this.status = "success";
           Swal.fire({
@@ -65,7 +71,7 @@ export class ModalSubirExcelComponent implements OnInit {
             title: response.message,
             showConfirmButton: false,
             timer: 1500
-          })
+          });
         }
       },
       error => {
@@ -74,5 +80,11 @@ export class ModalSubirExcelComponent implements OnInit {
       }
     );
     //console.log(forma.value);
+  }
+
+  dataChanged(evet){
+    //this.nuevaCuenta = event.target.value + 1;
+
+console.log(this.nuevaCuenta);
   }
 }

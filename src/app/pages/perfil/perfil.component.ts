@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-perfil',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
+  
+  usuario: any;
 
-  constructor() { }
+  constructor(
+    private _usuario: UsuarioService
+  ) {
+    this.usuario = this._usuario.getIdentity();
+   }
 
   ngOnInit() {
   }
