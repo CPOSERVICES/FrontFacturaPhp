@@ -1,4 +1,5 @@
 
+
 /*PAGES SERVICES*/
 export { LoginGuardGuard } from './guards/login-guard.guard';
 
@@ -40,6 +41,8 @@ export { IrbpnrService } from './impuestos/irbpnr.service';
 /*SERVICES ATS*/
     /*PLAN DE CUENTAS*/
 export { PlanCuentasService } from './ats/plan-cuentas.service';
+
+export { ProvinciasService } from './provincias/provincias.service';
 
 
 

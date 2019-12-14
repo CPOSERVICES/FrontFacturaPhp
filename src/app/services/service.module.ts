@@ -8,7 +8,10 @@ import {
   UsuarioService,
   ModalControlService,
   ModalUpdateService,
-  PlanCuentasService
+  PlanCuentasService,
+  ProvinciasService,
+  ClienteService,
+  ProductoService
 } from "./service.index";
 
 @NgModule({
@@ -20,7 +23,12 @@ import {
     UsuarioService,
     ModalControlService,
     ModalUpdateService,
-    PlanCuentasService
+    PlanCuentasService,
+    ClienteService,
+    ProductoService,
+    ProvinciasService,
+    
+
     //ProductoService,
     //IvaService,
     //IceService,

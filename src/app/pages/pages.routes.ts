@@ -114,7 +114,7 @@ const pagesRoutes: Routes = [
                 data: { titulo: "Clientes" }
             },
             {
-                path: "cliente",
+                path: "cliente/:id",
                 component: ClienteComponent,
                 data: { titulo: "Cliente" }
             },
@@ -156,7 +156,7 @@ const pagesRoutes: Routes = [
                 data: { titulo: "Productos" }
             },
             {
-                path: "producto",
+                path: "producto/:id",
                 component: ProductoComponent,
                 data: { titulo: "Producto" }
             },

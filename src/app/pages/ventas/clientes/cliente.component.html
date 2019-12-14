@@ -14,12 +14,13 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     <label class="control-label">Tipo Identificacion</label>
-                    <select [(ngModel)]="cliente" #tipo="ngModel" name="tipo" class="form-control custom-select"
+                    <select [(ngModel)]="cliente.tipoIdentificacion" #tipoidentificacion="ngModel" name="tipoidentificacion" class="form-control custom-select"
                       required>
                       <option value="defa">Selecione tipo</option>
-                      <option value="PRODUCTO">RUC</option>
-                      <option value="SERVICIO">CI</option>
-                      <option value="SERVICIO">Pasaporte</option>
+                      <option value="04">Cédula</option>
+                      <option value="01">Ruc</option>
+                      <option value="02">Pasaporte</option>
+                      <option value="03">Otro Documento</option>
                     </select>
                   </div>
                 </div>
@@ -27,38 +28,36 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     <label class="control-label">Identificacion</label>
-                    <input [(ngModel)]="cliente" #nombre="ngModel" type="text" name="nombre" class="form-control"
-                      placeholder="Nombre del pruducto" required>
+                    <input [(ngModel)]="cliente.identificacion" #identificacion="ngModel" type="text" name="identificacion" class="form-control"
+                      placeholder="Nombre Cliente" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                       <div class="form-group">
                         <label class="control-label">Nombres/Razon Social</label>
-                        <input [(ngModel)]="cliente" #nombre="ngModel" type="text" name="nombre" class="form-control"
+                        <input [(ngModel)]="cliente.nombre" #nombre="ngModel" type="text" name="nombre" class="form-control"
                           placeholder="Nombre del pruducto" required>
                       </div>
                     </div>
               </div>
   
-  
-  
               <div class="row">
                 <div class="col-md-3">
                   <div class="form-group">
-                    <label class="control-label">Alias Sucursal</label>
-                    <input [(ngModel)]="cliente" #detalle="ngModel" class="form-control" name="detalle">
+                    <label class="control-label">limite credito</label>
+                    <input [(ngModel)]="cliente.limiteCredito" #limiteCredito="ngModel" class="form-control" name="limiteCredito">
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
-                    <label class="control-label">Código Sucursal</label>
-                    <input [(ngModel)]="cliente" #detalle="ngModel" class="form-control" name="detalle">
+                    <label class="control-label">dias plazo</label>
+                    <input [(ngModel)]="cliente.diasPlazo" #diasPlazo="ngModel" class="form-control" name="diasPlazo">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="control-label">Dirección</label>
-                    <input [(ngModel)]="cliente" #detalle="ngModel" class="form-control" name="detalle">
+                    <input [(ngModel)]="cliente.direccion" #direccion="ngModel" class="form-control" name="direccion">
                   </div>
                 </div>
   
@@ -67,24 +66,26 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="control-label"> Correo </label>
-                        <input [(ngModel)]="cliente" type="email" name="precioUnitario"
-                          #precioUnitario="ngModel" class="form-control" placeholder="Correo" required>
+                        <input [(ngModel)]="cliente.correcoElectronico" type="email" name="correoelectronico"
+                          #correoelectronico="ngModel" class="form-control" placeholder="Correo" required>
+
+                  
                       </div>
                     </div>
   
                     <div class="col-md-3">
                       <div class="form-group">
                         <label class="control-label">Telefono</label>
-                        <input [(ngModel)]="cliente" #precioUnitario1="ngModel" type="text"
-                          name="precioUnitario1" class="form-control" placeholder="Telefono">
+                        <input [(ngModel)]="cliente.telefono" #telefono="ngModel" type="text"
+                          name="telefono" class="form-control" placeholder="Telefono">
                       </div>
                     </div>
   
                     <div class="col-md-3">
                       <div class="form-group">
                         <label class="control-label">Celular</label>
-                        <input [(ngModel)]="cliente" #precioUnitario2="ngModel" type="text"
-                          name="precioUnitario2" class="form-control" placeholder="Celular">
+                        <input [(ngModel)]="cliente.celular" #celular="ngModel" type="text"
+                          name="celular" class="form-control" placeholder="Celular">
                       </div>
                     </div>
                   </div>
@@ -95,20 +96,21 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="control-label"> Provincia </label>
-                        <select [(ngModel)]="cliente" #impuesto_iva_id="ngModel" name="iva"
+                        <select [(ngModel)]="cliente.idprovincias" #idProvincias="ngModel" name="idProvincias"
                           class="form-control custom-select" required>
-                          <option value="0" disabled>Seleccione % Iva</option>
-                          <option *ngFor="let iva of cliente" [ngValue]="iva.id">{{iva.nombre}}</option>
+                          <option value="0" disabled>Seleccione provincia</option>
+                          <option *ngFor="let provincia of provincias">{{provincia.provincia}}asd</option>
+                           <option  [ngValue]="1">Pichincha</option> 
                         </select>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="control-label">Ciudad</label>
-                        <select [(ngModel)]="cliente" #impuesto_iva_id="ngModel" name="iva"
+                        <select [(ngModel)]="cliente.idciudades" #idCiudades="ngModel" name="idCiudades"
                           class="form-control custom-select" required>
                           <option value="0" disabled>Seleccione % Iva</option>
-                          <option *ngFor="let iva of cliente" [ngValue]="iva.id">{{iva.nombre}}</option>
+                          <option  [ngValue]="1">Quito</option>
                         </select>
                       </div>
                     </div>

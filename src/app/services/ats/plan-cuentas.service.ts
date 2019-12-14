@@ -73,6 +73,7 @@ CARGA O LISTA PLAN DE CUENTAS POR ID
 CREA CUENTA
 ===========================================================*/
   create( token, cuenta ): Observable<any> {
+    console.log(cuenta);
     const json = JSON.stringify(cuenta);
     const params = 'json=' + json;
     const headers = new HttpHeaders()

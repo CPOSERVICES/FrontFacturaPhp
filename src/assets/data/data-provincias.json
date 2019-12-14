@@ -1,0 +1,262 @@
+{
+    "1": {
+            "provincia": "Azuay",
+            "cantones": {
+                "1": "Cuenca",
+                "2": "Gualaceo",
+                "3": "Nabón",
+                "4": "Paute",
+                "5": "Pucara",
+                "6": "San Fernando",
+                "7": "Sigsig",
+                "8": "Gualaceo",
+                "9": "Chordeleg",
+                "10": "El Pan",
+                "11": "Sevilla de Oro",
+                "12": "Camilo Ponce Enríquez"
+            }
+        },
+    "2": {
+        "provincia": "Bolívar",
+            "cantones": {
+                "1": "Guaranda",
+                "2": "Chillanes",
+                "3": "Chimbo",
+                "4": "Echandia",
+                "5": "San Miguel",
+                "6": "Caluma",
+                "7": "Las Naves"
+            }
+    },
+    "3": {
+        "provincia": "Cañar",
+            "cantones": {
+                "1": "Azogues",
+                "2": "Biblían",
+                "3": "Cañar",
+                "4": "La Troncal",
+                "5": "Déleg",
+                "6": "Suscal"
+            }
+    },
+    "4": {
+        "provincia": "Carchi",
+            "cantones": {
+                "1": "Tulcán",
+                "2": "Bolívar",
+                "3": "Espejo",
+                "4": "Mira",
+                "5": "Montúfar",
+                "6": "San Pedro de Huaca"
+            }
+    },
+    "5": {
+        "provincia": "Cotopaxi",
+            "cantones": {
+                "1": "Latacunga",
+                "2": "La Maná",
+                "3": "Pangua",
+                "4": "Pujili",
+                "5": "Salcedo",
+                "6": "Saquisilí",
+                "7": "Sigchos"
+            }
+    },    
+    "6": {
+        "provincia": "Chimborazo",
+            "cantones": {
+                "1": "Riobamba",
+                "2": "Alausí",
+                "3": "Colta",
+                "4": "Chambo",
+                "5": "Chunchí",
+                "6": "Guamote",
+                "7": "Guano",
+                "8": "Pallatanga",
+                "9": "Penipe",
+                "10": "Cumandá"
+            }
+    },
+    "7": {
+        "provincia": "El Oro",
+            "cantones": {
+                "1": "Machala",
+                "2": "Arenillas",
+                "3": "Atahualpa",
+                "4": "Balsas",
+                "5": "Chilla",
+                "6": "El Guabo",
+                "7": "Huaquillas",
+                "8": "Macabelí",
+                "9": "Pasaje",
+                "10": "Piñas",
+                "11": "Portoviejo",
+                "12": "Santa Rosa",
+                "13": "Zaruma",
+                "14": "Las Lajas"
+            }
+    },
+    "8": {
+        "provincia": "Esmeraldas",
+            "cantones": {
+                "1": "Esmeraldas",
+                "2": "Eloy Alfaro",
+                "3": "Muisne",
+                "4": "Quinindé",
+                "5": "San Lorenzo",
+                "6": "Atacames",
+                "7": "La Concordia"
+            }
+    },
+    "9": {
+        "provincia": "Guayas",
+            "cantones": {
+                "1": "Guayaquil",
+                "2": "Alfredo Baquerizo Moreno (Juján)",
+                "3": "Balao",
+                "4": "Balzar",
+                "5": "Colimes",
+                "6": "Daule",
+                "7": "El Empalme",
+                "8": "El Triunfo",
+                "9": "Milagro",
+                "10": "Naranjal",
+                "11": "Pedro Carbo",
+                "12": "Sanborondón",
+                "13": "Santa Lucía",
+                "14": "Salitre",
+                "15": "San Jacinto de Yaguachi",
+                "16": "Playas",
+                "17": "Simón Bolívar",
+                "18": "Coronel Marcelino Maridueña",
+                "19": "Lomas de Sargentillo",
+                "20": "Nobol",
+                "21": "General Antonio Elizalde",
+                "22": "Isidro Ayora"
+            }
+    },
+    "10": {
+        "provincia": "Imbabura",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "11": {
+        "provincia": "Loja",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "12": {
+        "provincia": "Los Ríos",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "13": {
+        "provincia": "Manabí",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "14": {
+        "provincia": "Morona Santiago",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "15": {
+        "provincia": "Napo",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "16": {
+        "provincia": "Pastaza",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "17": {
+        "provincia": "Pichincha",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "18": {
+        "provincia": "Tungurahua",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "19": {
+        "provincia": "Zamora Chinchipe",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "20": {
+        "provincia": "Galápagos",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "21": {
+        "provincia": "Sucumbíos",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "22": {
+        "provincia": "Orellana",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "23": {
+        "provincia": "Santo Domingo de los Tsáchilas",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    },
+    "24": {
+        "provincia": "Santa Elena",
+            "cantones": {
+                "1": "",
+                "2": ""
+            }
+
+    }
+
+
+
+}
+
