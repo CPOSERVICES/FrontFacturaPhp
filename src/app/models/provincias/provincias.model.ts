@@ -2,8 +2,10 @@
     
     
     constructor (
-        public provincia?: string,
-        public cantones?: string
+        public idP: string,
+        public nombreP: string,
+        public idC: string,
+        public nombreC: string
 
     ) {}
 }

@@ -7,7 +7,7 @@ import { Provincia } from 'src/app/models/provincias/provincias.model';
 })
 export class ProvinciasService {
 
-  provincias: Provincia = {}
+  //provincias: Provincia = {}
 
   constructor(
     private http: HttpClient
@@ -15,7 +15,7 @@ export class ProvinciasService {
 
     this.http.get('assets/data/data-provincias.json')
             .subscribe( resp => {
-              this.provincias = resp;
+              //this.provincias = resp;
               console.log(resp);
             })
   }

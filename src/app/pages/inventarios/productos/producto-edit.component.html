@@ -1,11 +1,17 @@
-<div class="row">
+<div align="center" *ngIf="cargando"
+class="jsgrid-load-panel text-center" style="display: block; position: absolute;  z-index: 1000; top: 30%; left: 40%;">
+  Cargando...
+</div>
+<div class="row" *ngIf="!cargando">
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header bg-info">
           <h4 class="mb-0 text-white">Información del Producto</h4>
         </div>
   
-        <form ngNativeValidate #forma="ngForm" (ngSubmit)="registraProducto( forma )">
+        <form ngNativeValidate #forma="ngForm" (ngSubmit)="actualizaProducto( forma )">
+  
+
           <hr>
           <div class="form-body">
             <div class="card-body">
@@ -13,7 +19,7 @@
               <div class="row pt-3">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="control-label">Codigo Auxiliar (Opcional) </label>
+                    <label class="control-label"> Codigo Auxiliar (Opcional) </label>
                     <input [(ngModel)]="producto.codigoprincipal" #codigoprincipal="ngModel" type="text" name="codigoprincipal" class="form-control" placeholder="Codogo del producto">
                   </div>
                 </div>
@@ -32,7 +38,7 @@
                   <div class="form-group">
                     <label class="control-label">Tipo</label>
                     <select [(ngModel)]="producto.tipo" #tipo="ngModel" name="tipo" class="form-control custom-select" required>
-                      <option value="" selected disabled required>Selecione tipo</option>
+                      <option value="defa">Selecione tipo</option>
                       <option value="PRODUCTO">Producto</option>
                       <option value="SERVICIO">Servicio</option>
                     </select>
@@ -42,8 +48,7 @@
                     <div class="form-group">
                         <label class="control-label">Impuesto Irbpnr</label>
                         <select [(ngModel)]="producto.impuestoIrbpnr" #impuestoIrbpnr="ngModel" name="impuestoIrbpnr" class="form-control custom-select">
-                          <option value="0" selected disabled>Seleccione % Irbpnr</option>
-                          <option value="0">Sin Irbpnr</option>
+                          <option value="0" disabled>Seleccione % Iva</option>
                           <option *ngFor="let irbpnr of impuestosIbrnpr" [ngValue]="irbpnr.id">{{irbpnr.nombre}}</option>  
                         </select> 
                     </div>
@@ -61,17 +66,15 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="control-label">Impuesto Iva</label>
-                    <select [(ngModel)]="producto.impuestoIva" #impuestoIva="ngModel" name="impuestoIva" class="form-control custom-select" required>
-                       <option value="0" selected disabled>Seleccione % Iva</option>
-                       <option value="0">Sin Iva</option>
+                    <select [(ngModel)]="producto.impuestoIva" #impuestoIva="ngModel" name="impuestoIva" class="form-control custom-select">
+                       <option value="0" disabled>Seleccione % Iva</option>
                        <option *ngFor="let iva of impuestosIva" [ngValue]="iva.id">{{iva.nombre}}</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="control-label">Impuesto Ice</label>
+                    <label class="control-label"> Impuesto Ice</label>
                      <select [(ngModel)]="producto.impuestoIce"  #impuestoIce="ngModel" name="impuestoIce" class="form-control custom-select">
-                        <option value="0" selected disabled>Seleccione % Ice</option>
-                        <option value="0">Sin Ice</option>
+                        <option value="" selected="selected" disabled>Seleccione % Ice</option>
                        <option *ngFor="let ice of impuestosIce" [ngValue]="ice.id">{{ice.nombre}}</option>
                       </select> 
                   </div>
@@ -81,7 +84,7 @@
                   <div class="row pt-4">
                     <div class="col-md-4">
                       <div class="form-group">
-                        <label class="control-label">Precio 1</label>
+                        <label class="control-label"> Precio 1 </label>
                         <input [(ngModel)]="producto.preciounitario" type="text" name="preciounitario" #preciounitario="ngModel" class="form-control" placeholder="Precio 1" required>
                       </div>
                     </div>
@@ -106,7 +109,7 @@
                   <div class="row pt-6">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="control-label">Cantidad</label>
+                        <label class="control-label"> Cantidad </label>
                         <input [(ngModel)]="producto.stock" type="text" #stock="ngModel" name="stock" class="form-control" placeholder="Cantidad" required>
                       </div>
                     </div>
@@ -122,8 +125,8 @@
             </div>
             <div class="form-actions">
               <div class="card-body">
-                <button  type="submit" class="btn btn-success"> <i class="fa fa-save"></i> Guardar</button>
-                <button type="button" class="btn btn-danger" routerLink="/productos"><i class="fa fa-times"></i> Cancel</button>
+                <button [disabled]="forma.touched == false" type="submit" class="btn btn-success"> <i class="fa fa-save"></i> Actualizar</button>
+                <button type="button" class="btn btn-danger" routerLink="/productos"><i class="fa fa-times"></i> Cancelar</button>
               </div>
             </div>
           </div>

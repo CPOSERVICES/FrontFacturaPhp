@@ -47,8 +47,8 @@ create( token, producto ): Observable<any> {
   const headers = new HttpHeaders()
           .set('Content-Type', 'application/x-www-form-urlencoded')
           .set('Authorization', token);
-          let url = URL_SERVICES + '/product/new';
-    return this.http.post( url, params, {headers});
+            let url = URL_SERVICES + '/product/new';
+            return this.http.post( url, params, {headers});          
 }
 
 /*==========================================================
@@ -60,8 +60,8 @@ update(token, producto): Observable<any> {
   const headers = new HttpHeaders()
           .set('Content-Type', 'application/x-www-form-urlencoded')
           .set('Authorization', token);
-          let url = URL_SERVICES + '/product/edit/' + producto.pgcid;
-  return this.http.put( url, params,  {headers});
+          let url = URL_SERVICES + '/product/edit/' + producto.id;
+          return this.http.put( url, params,  {headers});
 }
 
 /*==========================================================

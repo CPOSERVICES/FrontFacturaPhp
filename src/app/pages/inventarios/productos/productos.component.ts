@@ -29,11 +29,13 @@ export class ProductosComponent implements OnInit {
 LISTA PLAN DE CUENTAS
 ===========================================================*/
 cargarProductos() {
-  //this.cargando = true;
+  this.cargando = true;
   this._producto.getProductos(this.token).subscribe(
     resp => {
-      this.productos = resp.videos;
-      //console.log('a', this.productos);
+      //console.log(resp)
+      this.productos = resp.data;
+      this.cargando = false;
+
     });
 }
 

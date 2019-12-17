@@ -9,35 +9,39 @@ import { Provincia } from 'src/app/models/provincias/provincias.model';
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
-  styles: []
+  styleUrls: ['./clientes.component.css']
 })
 export class ClienteComponent implements OnInit {
 
-  cliente: Cliente;
+  public cliente: Cliente;
   token: string;
   status: string;
   provincias: Provincia[] = [];
+  cargando: boolean = true;
 
   constructor(
     private _usuario: UsuarioService,
     private _cliente: ClienteService,
     private _provincias: ProvinciasService,
-    private activatedRoute: ActivatedRoute,
     private router: Router
   ) { 
     this.token = this._usuario.getToken();
     
-    this.cliente = new Cliente(0,'','','','',0,0,'','','','','',0,'');
+      //this.cliente = new Cliente(0,'','','',0,0,'','','','','',0,'','',0,0,'',0,0,0,0);
   }
 
   ngOnInit() {
-    //this.getCliente();
-    //console.log('bbbbb',this.getCliente() );
+    this.cliente = new Cliente(1,'','','','',0,0,'','','',0,'','',0,0,'',0,0,0,0);
+    
+    console.log('clientesss',this.cliente);
   }
 
   registraCliente(forma){
+    // this.cliente = new Cliente(0,'','','','',0,0,'','','','','',0,'','',0,0,'',0,0,0,0);
+    console.log('clientesss',this.cliente);
      this._cliente.create(this.token, this.cliente).subscribe(
        response => {
+         console.log('cliente', response)
          if (response.status == "success") {
            this.status = "success";
            Swal.fire({
@@ -47,6 +51,7 @@ export class ClienteComponent implements OnInit {
              timer: 1500
            })
            forma.reset();
+           this.router.navigate(['/clientes']);
          } else {
            this.status = "error";
            Swal.fire({
@@ -64,28 +69,6 @@ export class ClienteComponent implements OnInit {
   }
 
 
-  getCliente(){
-    this.activatedRoute.params.subscribe(params =>{
-      var id = +params['id'];
-      this._cliente.getCliente(this.token, id).subscribe(
-        response => {
-          console.log ("response.status ",response.status );
-          if (response.status == 'success') {
-            this.cliente = response.data;
-            console.log("nada",this.cliente);
-          } else {
-            //this.router.navigate(['/inicio']);
-            console.log('errror al actualizar');
-          }
-          
-        },
-        error => {
-          this.status = 'error';
-          console.log(error);
-        }
-      );
-    });
-
-  }
+  
 
 }

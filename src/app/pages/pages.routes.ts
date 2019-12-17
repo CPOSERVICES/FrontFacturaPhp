@@ -29,6 +29,8 @@ import { CobrosComponent } from './ventas/cobros/cobros.component';
 import { CobroComponent } from './ventas/cobros/cobro.component';
 import { PlanCuentasComponent } from './plan-cuentas/plan-cuentas.component';
 import { LoginGuardGuard } from '../services/service.index';
+import { ClienteEditComponent } from './ventas/clientes/cliente-edit.component';
+import { ProductoEditComponent } from './inventarios/productos/producto-edit.component';
 
 const pagesRoutes: Routes = [
     {
@@ -115,8 +117,13 @@ const pagesRoutes: Routes = [
             },
             {
                 path: "cliente/:id",
+                component: ClienteEditComponent,
+                data: { titulo: "Actualizar Cliente" }
+            },
+            {
+                path: "cliente",
                 component: ClienteComponent,
-                data: { titulo: "Cliente" }
+                data: { titulo: "Cliente Nuevo" }
             },
             {
                 path: "cobros",
@@ -157,8 +164,13 @@ const pagesRoutes: Routes = [
             },
             {
                 path: "producto/:id",
+                component: ProductoEditComponent,
+                data: { titulo: "Actualizar Producto" }
+            },
+            {
+                path: "producto",
                 component: ProductoComponent,
-                data: { titulo: "Producto" }
+                data: { titulo: "Producto Nuevo" }
             },
             /*MI AGENDA*/
             {

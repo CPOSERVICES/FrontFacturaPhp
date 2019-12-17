@@ -60,20 +60,24 @@ CREA CLIENTE
     const headers = new HttpHeaders()
             .set('Content-Type', 'application/x-www-form-urlencoded')
             .set('Authorization', token);
-            let url = URL_SERVICES + '/client/new';
-      return this.http.post( url, params, {headers});
+
+          
+              let url = URL_SERVICES + '/client/new';
+              return this.http.post( url, params, {headers});
+            
+            
   }
 
 /*==========================================================
 ACTUALIZA CLIENTE POR ID
 ===========================================================*/
-  update(token, cuenta): Observable<any> {
-    const json = JSON.stringify(cuenta);
+  update(token, cliente): Observable<any> {
+    const json = JSON.stringify(cliente);
     const params = 'json=' + json;
     const headers = new HttpHeaders()
             .set('Content-Type', 'application/x-www-form-urlencoded')
             .set('Authorization', token);
-            let url = URL_SERVICES + '/client/edit/' + cuenta.pgcid;
+            let url = URL_SERVICES + '/client/edit/' + cliente.id;
     return this.http.put( url, params,  {headers});
   }
 

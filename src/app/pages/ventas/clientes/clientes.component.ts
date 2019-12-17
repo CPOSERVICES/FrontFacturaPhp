@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class ClientesComponent implements OnInit {
 
-  cargando: boolean
+  cargando: boolean = true;
   clientes: Cliente[] = [];
   token: string
 
@@ -29,14 +29,14 @@ export class ClientesComponent implements OnInit {
 LISTA PLAN DE CUENTAS
 ===========================================================*/
 cargarClientes() {
-  //this.cargando = true;
+  this.cargando = true;
   this._cliente.getClientes(this.token).subscribe(
     resp => {
       this.clientes = resp.data;
       
       //this.cuentas = resp.data;
       //console.log('a', this.clientes);
-      
+      this.cargando = false;
      
     });
 }

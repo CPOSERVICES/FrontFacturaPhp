@@ -1,19 +1,58 @@
 {
     "1": {
-            "provincia": "Azuay",
+            "provincia": {
+                "idP": "1",
+                "nombreP":"Azuay"
+            },
             "cantones": {
-                "1": "Cuenca",
-                "2": "Gualaceo",
-                "3": "Nabón",
-                "4": "Paute",
-                "5": "Pucara",
-                "6": "San Fernando",
-                "7": "Sigsig",
-                "8": "Gualaceo",
-                "9": "Chordeleg",
-                "10": "El Pan",
-                "11": "Sevilla de Oro",
-                "12": "Camilo Ponce Enríquez"
+                "1": {
+                    "idC":"1",
+                    "nombreC":"Cuenca"
+                },
+                "2": {
+                    "idC":"2",
+                    "nombreC":"Gualaceo"
+                },
+                "3": {
+                    "idC":"3",
+                    "nombreC":"Nabón"
+                },
+                "4": {
+                    "idC":"4",
+                    "nombreC":"Paute"
+                },
+                "5": {
+                    "idC":"5",
+                    "nombreC": "Pucara"
+                },
+                "6": {
+                    "idC":"6",
+                    "nombreC":"San Fernando"
+                },
+                "7": {
+                    "idC":"7",
+                    "nombreC":"Sigsig"
+                },
+                "8": {
+                    "idC": "8",
+                    "nombreC":"Gualaceo"
+                },
+                "9": {
+                    "idC": "9",
+                    "nombreC":"Chordeleg"
+                },
+                "10": {
+                    "idC": "10",
+                    "nombreC": "El Pan"
+                },
+                "11": {
+                    "idC":"11",
+                    "nombreC": "Sevilla de Oro"
+                },
+                "12": {
+                    "idC":"12",
+                    "nombreC":"Camilo Ponce Enríquez"
+                }
             }
         },
     "2": {
