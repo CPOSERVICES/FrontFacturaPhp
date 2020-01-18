@@ -1,0 +1,235 @@
+
+
+<div class="row" >
+
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header bg-info">
+          <h5 class="mb-0 text-white">Colaborador</h5>
+        </div>
+        
+  
+        <form ngNativeValidate #forma="ngForm" (ngSubmit)="(forma)">
+            <br>
+          <div class="form-body">
+            <div align="right" >
+                <button class="btn btn-outline-success" (click)="openLg(content)"><i class="fa fa-plus"></i>Nuevo Colaborador</button>
+           
+           </div> 
+            <div class="card-body">
+  
+              <div class="row pt-3">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="control-label">Tipo Identificación</label>
+                     <select class="form-control custom-select"
+                      required> 
+                      <option value="04">Cédula</option>
+                      <option value="01">Ruc</option>
+                      <option value="02">Pasaporte</option>
+                      <option value="03">Otro Documento</option>
+                    </select> 
+                  </div>
+                </div>
+  
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="control-label">Identificación</label>
+                    <input  type="text" value="111111111111" name="identificacion" class="form-control"
+                      placeholder="Nombre Cliente" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Nombres</label>
+                        <input value="Luis Cardenas" type="text" name="nombre" class="form-control"
+                          placeholder="Nombre del pruducto" required>
+                      </div>
+                    </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Dirección</label>
+                    <input value="Quinche" class="form-control" name="direccion">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="control-label">Teléfono</label>
+                    <input value="222-2222"  class="form-control" name="telefono">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="control-label">Celular</label>
+                    <input value="0999999999" class="form-control" name="celular">
+                  </div>
+                </div>
+  
+                <div class="col-md-12">
+                  <div class="row pt-4">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Correo</label>
+                        <input value="colaborador1@colaborador.com"  type="email" name="correoelectronico"
+                          class="form-control" placeholder="Correo" required>
+                      </div>
+                    </div>
+  
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="control-label">Provincia</label>
+                        <select   name="idProvincias"
+                          class="form-control custom-select" required>
+                       
+                        
+                           <option  value="1">Pichincha</option> 
+                        </select>
+                      </div>
+                    </div>
+  
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="control-label">Ciudad</label>
+                        <select  name="idCiudades"
+                          class="form-control custom-select" required>
+                          <option  value="1">Quito</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+            
+  
+  
+  
+              </div>
+            </div>
+            <div class="form-actions">
+              <div class="card-body">
+                <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i> Guardar</button>
+                <button type="button" class="btn btn-danger" routerLink="/clientes"><i class="fas fa-times"></i> Cancelar</button>
+              </div>
+            </div>
+          </div>
+  
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Nuevo Colaborador</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="card-body">
+  
+            <div class="row pt-3">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="control-label">Tipo Identificación</label>
+                   <select class="form-control custom-select"
+                    required> 
+                    <option value="04">Cédula</option>
+                    <option value="01">Ruc</option>
+                    <option value="02">Pasaporte</option>
+                    <option value="03">Otro Documento</option>
+                  </select> 
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="control-label">Identificación</label>
+                  <input  type="text"  name="identificacion" class="form-control"
+                    placeholder="Nombre Cliente" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Nombres</label>
+                      <input  type="text" name="nombre" class="form-control"
+                        placeholder="Nombre del pruducto" required>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Dirección</label>
+                  <input  class="form-control" name="direccion">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="control-label">Teléfono</label>
+                  <input  class="form-control" name="telefono">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label class="control-label">Celular</label>
+                  <input  class="form-control" name="celular">
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="row pt-4">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Correo</label>
+                      <input   type="email" name="correoelectronico"
+                        class="form-control" placeholder="Correo" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Provincia</label>
+                      <select   name="idProvincias"
+                        class="form-control custom-select" required>
+                     
+                      
+                         <option  value="1">Pichincha</option> 
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Ciudad</label>
+                      <select  name="idCiudades"
+                        class="form-control custom-select" required>
+                        <option  value="1">Quito</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          
+
+
+
+            </div>
+          </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Guardar</button>
+    </div>
+  </ng-template>
+  
+
+
+  
+  

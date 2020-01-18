@@ -50,6 +50,32 @@ import { ModalAgendaComponent } from '../components/modal-agenda/modal-agenda.co
 import { ModalSubirExcelComponent } from '../components/modal-subir-excel/modal-subir-excel.component';
 import { ModalUpdatePlanComponent } from '../components/modal-update-plan/modal-update-plan.component';
 import { ClienteEditComponent } from './ventas/clientes/cliente-edit.component';
+ AreasComponent 
+import { OrdenesTrabajoComponent } from './comun/ordenes-trabajo/ordenes-trabajo.component';
+import { OrdenTrabajoComponent } from './comun/ordenes-trabajo/orden-trabajo.component';
+import { OrdenTrabajoEditarComponent } from './comun/ordenes-trabajo/orden-trabajo-editar.component';
+import { HistorialVehiculoComponent } from './comun/ordenes-trabajo/historial-vehiculo.component';
+import { OrdenesTrabajoGeneradasComponent } from './jefeTaller/ordenes-trabajo-generadas/ordenes-trabajo-generadas.component';
+import { RepuestosComponent } from './recepcion/repuestos/repuestos.component';
+import { VehiculoComponent } from './recepcion/vehiculo.component';
+import { ClientesRComponent } from './recepcion/clientes-r.component';
+import { OrdenesAsignadasComponent } from './tecnico/ordenes-asignadas/ordenes-asignadas.component';
+import { OrdenAsignadaComponent } from './tecnico/orden-asignada/orden-asignada.component';
+import { ProductosPendientesComponent } from './bodega/productos-pendientes.component';
+import { PedidoTecnicoComponent } from './bodega/pedido-tecnico.component';
+import { PedidosTecnicoComponent } from './bodega/pedidos-tecnico.component';
+import { ColaboradoresComponent } from './RRHH/colaboradores.component';
+import { ColaboradorComponent } from './RRHH/colaborador.component';
+import { RolesPagoComponent } from './RRHH/roles-pago.component';
+import { RolPagoComponent } from './RRHH/rol-pago.component';
+import { NotificacionesComponent } from './recepcion/notificaciones/notificaciones.component';
+
+import { AreasComponent } from './Administrador/areas.component';
+import { UsuariosComponent } from './Administrador/usuarios.component';
+import { PerfilesUsuarioComponent } from './Administrador/perfiles-usuario.component';
+import { ComprasComponent } from './reportes/compras/compras.component';
+import { VentasComponent } from './reportes/ventas/ventas.component';
+
 
 
 
@@ -93,7 +119,30 @@ import { ClienteEditComponent } from './ventas/clientes/cliente-edit.component';
     ModalUpdatePlanComponent,
     PlanCuentasComponent,
     ClienteEditComponent,
-    ProductoEditComponent
+    ProductoEditComponent,
+    AreasComponent,
+    OrdenesTrabajoComponent,
+    OrdenTrabajoComponent,
+    OrdenTrabajoEditarComponent,
+    HistorialVehiculoComponent,
+    OrdenesTrabajoGeneradasComponent,
+    RepuestosComponent,
+    VehiculoComponent,
+    ClientesRComponent,
+    OrdenesAsignadasComponent,
+    OrdenAsignadaComponent,
+    ProductosPendientesComponent,
+    PedidoTecnicoComponent,
+    PedidosTecnicoComponent,
+    ColaboradoresComponent,
+    ColaboradorComponent,
+    RolesPagoComponent,
+    RolPagoComponent,
+    NotificacionesComponent,
+    UsuariosComponent,
+    PerfilesUsuarioComponent,
+    ComprasComponent,
+    VentasComponent,
 
   ],
   imports: [

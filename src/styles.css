@@ -2,3 +2,8 @@
 .oculto {
     display: none;
 }
+
+.cpo{
+    color: #1F618D;
+    border-radius: 50px;
+  }

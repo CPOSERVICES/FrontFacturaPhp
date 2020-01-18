@@ -1,0 +1,81 @@
+<div class="row">
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Productos Faltantes</h4>
+        <h6 class="card-subtitle">Productos solicitados</h6>
+        <button (click)="openLg(content)" class="btn btn-outline-success"><i class="fa fa-plus"></i> Área
+          Nueva</button>
+        <br>
+        <br>
+        <div class="table-responsive">
+          <table class="table color-table info-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Área</th>
+                <th>Nombre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>Taller Mecánica</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>Recepción</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>Facturación</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>4</td>
+                <td>Bodega</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button routerLink="/ordenesTrabajo" class="btn btn-pinterest btn-block"> Regresar</button>
+    </div>
+
+  </div>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Área Nueva</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="card-body">
+      <div class="row pt-3">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label">Código</label>
+            <input type="text" name="identificacion" class="form-control" placeholder="0000" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label">Nombre Área</label>
+            <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-success" (click)="modal.close('Close click')"><i class="fa fa-plus"></i> Guardar</button>
+  </div>
+</ng-template>

@@ -1,0 +1,115 @@
+<!-- <div align="center"  *ngIf="cargando"
+class="jsgrid-load-panel text-center" style="display: block; position: absolute;  z-index: 1000; top: 30%; left: 40%;">
+  Cargando...
+</div> -->
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+            <button routerLink='/cliente' type="button" class="btn btn-info btn-rounded m-t-10 float-right">
+              <i class="fas fa-plus"></i> Nuevo Usuario
+            </button>
+          <br>
+          <br>
+          <br>
+          <div id="basicgrid" class="jsgrid" style="position: relative; height: 700px; width: 100%;">
+            <div class="jsgrid-grid-header jsgrid-header-scrollbar">
+              <table class="jsgrid-table table table-striped table-hover">
+                <tr class="jsgrid-header-row">
+                  <th class="jsgrid-header-cell jsgrid-header-sortable jsgrid-align-center" style="width: 20px;">#</th>
+                  <th class="jsgrid-header-cell jsgrid-header-sortable jsgrid-align-center" style="width: 30px;">Identificación</th>
+                  <th class="jsgrid-header-cell jsgrid-header-sortable jsgrid-align-center" style="width: 30px;">Nombre</th>
+                  <th class="jsgrid-header-cell jsgrid-header-sortable jsgrid-align-center" style="width: 30px;">Area</th>
+                  <th class="jsgrid-header-cell jsgrid-control-field jsgrid-align-center" style="width: 50px;">
+                      <button class="btn btn-light" title=""> <i class="fas fa-search"></i></button>
+                    </th>
+                </tr>
+                <tr class="jsgrid-filter-row " style="display: none;">
+                    <td class="jsgrid-cell" style="width: 50px;"></td>
+                    <td class="jsgrid-cell" style="width: 50px;">
+                      <input type="text" class="form-control input-sm">
+                    </td>
+                    <td class="jsgrid-cell" style="width: 50px;">
+                      <input type="text" class="form-control input-sm">
+                    </td>
+                    <td class="jsgrid-cell">
+                      <input type="text" class="form-control input-sm">
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div class="jsgrid-grid-body" style="height: 500px;">
+                <table class="jsgrid-table table table-striped table-hover">
+                    <tbody>
+                      <tr class="jsgrid-row">
+                        <td class="jsgrid-cell jsgrid-align-center" style="width: 20px;">1</td>
+                        <td class="jsgrid-cell" style="width: 30px;">11111111111</td>
+                        <td class="jsgrid-cell" style="width: 30px;">Diana López</td>
+                        <td class="jsgrid-cell" style="width: 30px;">Recepción</td>
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="width: 50px;">
+                          <button routerLink="/colaborador" class="btn btn-info">
+                            <i class="fas fa-pencil-alt"></i>
+                          </button>
+                          <button  class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="jsgrid-row">
+                        <td class="jsgrid-cell jsgrid-align-center" style="width: 20px;">2</td>
+                        <td class="jsgrid-cell" style="width: 30px;">11111111112</td>
+                        <td class="jsgrid-cell" style="width: 30px;">Luis Cardenas</td>
+                        <td class="jsgrid-cell" style="width: 30px;">Técnicos</td>
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="width: 50px;">
+                          <button  class="btn btn-info">
+                            <i class="fas fa-pencil-alt"></i>
+                          </button>
+                          <button  class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="jsgrid-row">
+                        <td class="jsgrid-cell jsgrid-align-center" style="width: 20px;">3</td>
+                        <td class="jsgrid-cell" style="width: 30px;">11111111113</td>
+                        <td class="jsgrid-cell" style="width: 30px;">Ivon Alulema</td>
+                        <td class="jsgrid-cell" style="width: 30px;">Facturación</td>
+                        <td class="jsgrid-cell jsgrid-control-field jsgrid-align-center" style="width: 50px;">
+                          <button class="btn btn-info">
+                            <i class="fas fa-pencil-alt"></i>
+                          </button>
+                          <button  class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="jsgrid-pager-container"  align="center">
+              <div class="jsgrid-pager">
+                 <span  class="jsgrid-pager-nav-button"><a href="javascript:void(0);">Anterior</a></span> 
+                  <!-- <span class="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button"><a href="javascript:void(0);">Prev</a></span>
+                  <span class="jsgrid-pager-page jsgrid-pager-current-page">1</span>
+                  <span class="jsgrid-pager-page"><a href="javascript:void(0);">2</a></span>
+                  <span class="jsgrid-pager-page"><a href="javascript:void(0);">3</a></span>
+                  <span class="jsgrid-pager-page"><a href="javascript:void(0);">4</a></span>
+                  <span class="jsgrid-pager-page"><a href="javascript:void(0);">5</a></span>
+                  <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">...</a></span>
+                  <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);">Next</a></span> -->
+                  <span class="jsgrid-pager-nav-button"> <a href="javascript:void(0);">Siguiente</a></span> 
+                  <!-- &nbsp;&nbsp; 1 of 7   -->
+              </div>
+            </div>
+            <div class="jsgrid-load-shader"
+              style="display: none; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 1000;">
+            </div>
+            <!-- <div  class="jsgrid-load-panel" style="display: block; position: absolute; top: 50%; left: 50%; z-index: 1000;">
+              Please, wait...
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
